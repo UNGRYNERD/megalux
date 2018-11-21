@@ -1,0 +1,27 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $colortexto;
+  font-family: $tipo-regular;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $tipo-light;
+  line-height: 34px;
+}
+
+h1 {font-size: 48px;}
+h2 {font-size: 40px;}
+h3 {font-size: 25px;}
+h4 {font-size: 20px;}
+
+p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+
+strong {font-family: $tipo-bold;}

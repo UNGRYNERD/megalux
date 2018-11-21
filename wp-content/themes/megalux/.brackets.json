@@ -1,0 +1,16 @@
+/* REMOVE comments from json file before using this template */
+{
+    /* disable compiling other files that aren't the "main" file */
+    "sass.enabled": false,
+    "path": {
+        "scss/app.scss": {
+            "sass.enabled": true,
+            "sass.options": {
+                "outputDir": "../sass/",
+                "includePaths": [],
+                "sourceComments": false,
+                "outputStyle": "nested"
+            }
+        }
+    }
+}
