@@ -31,9 +31,15 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
           <section class="box-content">
             <div class="container">
               <div class="row">
-                <div class="col-12">
-                  <?php echo $item[texto]?>
-                </div>
+                <?php if($item[titulo]){?>
+                  <div class="col-12">
+                    <h2 class="text-center"><?php echo $item[titulo];?></h2>
+                  </div>
+                <?php } if($item[texto]){?>
+                  <div class="col-12">
+                    <?php echo $item[texto];?>
+                  </div>
+                <?php }?>
               </div>
             </div>
           </section>
@@ -65,13 +71,15 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
         if($item[acf_fc_layout] == 'imagen_parallax') {?>
         
           <section class="box-content parallax" style="background-image:url('<?php echo $item['imagen_parallax']['url'];?>'); height: 400px" data-type="background-image" data-speed="2">
-            <div class="container">
-              <div class="row">
-               <div class="col-12">
-                 <h2><?php echo $item[texto]?></h2>
-               </div>
+           <?php if($item[texto]){?>
+              <div class="container">
+                <div class="row">
+                 <div class="col-12">
+                   <h2><?php echo $item[texto]?></h2>
+                 </div>
+                </div>
               </div>
-            </div>
+            <?php }?>
           </section>
         
         <?php }
@@ -220,6 +228,68 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                   
                 <?php }
                 ?>
+              </div>
+            </div>
+          </section>
+        
+        <?php }
+        
+        //caja de texto
+        if($item[acf_fc_layout] == 'bloque_doble_columna') {?>
+        
+          <section class="box-content box-doble">
+            <div class="container">
+              <div class="row">
+                <?php if($item[titulo] || $item[texto_izquierda] || $item[listado]){?>
+                  <div class="col-12 col-md-6 content">
+                    <?php if($item[titulo]){?>
+                      <h2><?php echo $item[titulo];?></h2>
+                    <?php } if($item[texto_izquierda]){?>
+                      <?php echo $item[texto_izquierda];?>
+                    <?php } if($item[listado]){?>
+                     
+                      <ul>
+                      <?php foreach($item[listado] as $list){?>
+                        <li class="d-flex">
+                          <img src="<?php echo $list['icono']['sizes']['medium'];?>" alt="<?php echo $list['icono']['alt']?>" title="<?php echo $list['icono']['title']?>">
+                          <p><?php echo $list['texto'];?></p>
+                        </li>
+                      <?php }?>
+                      </ul>
+                      
+                    <?php } ?>
+                    
+                  </div>
+                <?php } //fin bloque izq
+                                                            
+                if($item[texto_derecha] || $item[imagen_derecha]){?>
+                  <div class="col-12 col-md-6">
+                    <?php if($item[texto_derecha]){
+                      echo $item[texto_derecha];
+                    } if($item[imagen_derecha]){?>
+                      <img class="img-border" src="<?php echo $item[imagen_derecha][url];?>" alt="<?php echo $item[imagen_derecha][alt]?>" title="<?php echo $item[imagen_derecha][title]?>">
+                    <?php }?>
+                  </div>
+                <?php }?>
+              </div>
+            </div>
+          </section>
+        
+        <?php }         
+        
+        //caja de texto
+        if($item[acf_fc_layout] == 'banner') {?>
+        
+          <section class="box-content box-banner">
+            <div class="container">
+              <div class="row">
+                <?php if($item[imagen_banner] && $item[url_banner]){?>
+                  <div class="col-12">
+                    <a href="<?php echo $item[url_banner];?>">
+                      <img class="img-border" src="<?php echo $item[imagen_banner][url];?>" alt="<?php echo $item[imagen_banner][alt]?>" title="<?php echo $item[imagen_banner][title]?>">
+                    </a>
+                  </div>
+                <?php }?>
               </div>
             </div>
           </section>
