@@ -67,7 +67,9 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
           <section class="box-content parallax" style="background-image:url('<?php echo $item['imagen_parallax']['url'];?>'); height: 400px" data-type="background-image" data-speed="2">
             <div class="container">
               <div class="row">
-                <?php echo $item[texto]?>
+               <div class="col-12">
+                 <h2><?php echo $item[texto]?></h2>
+               </div>
               </div>
             </div>
           </section>
@@ -79,7 +81,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
         
           <section class="box-content box-clientes" >
             <div class="container">
-              <div class="row">
+              <div class="row justify-content-center">
                 <?php if($item[titulo]){?>
                  
                   <div class="col-12">
@@ -88,9 +90,12 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                   
                 <?php } if($item[texto]){?>
                  
-                  <div class="content">
+                  <div class="col-12 col-md-10 content">
                     <?php echo $item[texto];?>
                   </div>
+                </div>
+                
+                <div class="row">
                   
                 <?php } if($item[galeria]){
                   foreach($item[galeria] as $galeria){?>
@@ -127,7 +132,29 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                       </div>
                     </div>
                   </div>
-                <?php }?>
+                <?php }
+                if($item[texto]){?>
+                  <div class="content">
+                    <?php echo $item[texto];?>
+                  </div>
+                <?php }
+                                                   
+                if($item[botones_testimonios]){ 
+                  
+                  if(count($item[botones_testimonios]) == '1'){
+                    $align = ' justify-content-center';
+                  } else if (count($item[botones_testimonios]) == '2'){
+                    $align = ' justify-content-around';
+                  }?>
+                  <div class="col-12">
+                    <div class="row row-buttons <?php echo $align;?>">
+                      <?php foreach($item[botones_testimonios] as $btn){?>
+                        <a class="button button--outline button--blue" href="<?php echo $btn[url_boton]?>"><?php echo $btn[texto_boton]?></a>
+                      <?php }?>
+                    </div>
+                  </div>
+                <?php } ?>
+                                                                  
               </div>
             </div>
           </section>
@@ -174,14 +201,14 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                   if(count($item[botones]) == '1'){
                     $align = ' justify-content-center';
                   } else if (count($item[botones]) == '2'){
-                    $align = ' justify-content-between';
+                    $align = ' justify-content-around';
                   }?>
-                  <div class="row row-buttons w-100 <?php echo $align;?>">
-                    <?php foreach($item[botones] as $btn){?>
-
+                  <div class="col-12">
+                    <div class="row row-buttons <?php echo $align;?>">
+                      <?php foreach($item[botones] as $btn){?>
                         <a class="button button--outline button--blue" href="<?php echo $btn[url_boton]?>"><?php echo $btn[texto_boton]?></a>
-
-                    <?php }?>
+                      <?php }?>
+                    </div>
                   </div>
                 <?php }
                 

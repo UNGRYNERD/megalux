@@ -33,13 +33,25 @@
   padding: 70px 0;
 }
 
-//BOX TIRA DE ICONOES
+//BOX TIRA DE ICONOS
 .box-icons {
-  padding: 50px 0;
+  padding: 37px 0;
   background-color: $azulclaro;
   
   p {
     color: $azultexto;
+  }
+}
+
+//BOX PARALLAX
+.parallax{
+  h2 {
+    text-align: center;
+    color: #fff;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 45px 100px;
+    line-height: normal;
   }
 }
 
@@ -133,7 +145,7 @@
   padding: 9px 40px;
   display: inline-block;
   border-radius: 2px;
-  background-color: #fff;
+  background-color: transparent;
   @include transition(ease all 0.5s);
   
   &--outline {
@@ -148,6 +160,54 @@
     &:hover{
       background-color: $azulboton;
       color: #fff;
+    }
+  }
+  
+  &--blue--dark {
+    border-color: $azultitulos;
+    color: $azultitulos;
+    
+    &:hover{
+      background-color: $azultitulos;
+      color: #fff;
+    }
+  }
+}
+
+//HOME
+.home {
+  
+  .box-proyectos {
+    background-color: $azulclaro;
+    
+    h2 {
+      color: $azultitulos;
+      font-size: 25px;
+      margin-bottom: 50px;
+    }
+  }
+  
+  .row-buttons {padding: 30px 0 0;}
+  
+  .button {
+    border-width: 1px;
+    
+    &--blue {
+      border-color: $azultitulos;
+      color: $azultitulos;
+    
+      &:hover{
+        background-color: $azultitulos;
+        color: #fff;
+      }
+    }
+  }
+  
+  .content {
+    p {
+      font-size: 14px;
+      color: $azultitulos;
+      margin-bottom: 24px;
     }
   }
 }
