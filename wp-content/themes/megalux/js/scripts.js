@@ -9,15 +9,19 @@ $(document).ready(function() {
   var width = $(window).width();
 
   if(width > 767) {
+    $('main').css('min-height' , height);
+
+    parallaxIt(); 
+
+    $(window).resize(function(){
+      var height = $(window).height();
+      var width = $(window).width();
+
       $('main').css('min-height' , height);
 
-      $(window).resize(function(){
-          var height = $(window).height();
-          var width = $(window).width();
+      parallaxIt(); 
 
-          $('main').css('min-height' , height);
-
-      })
+    })
   }
 
   // MENU TOOGLE
@@ -77,9 +81,5 @@ $(document).ready(function() {
     // triggers winodw scroll for refresh
     $fwindow.trigger('scroll');
   };
-  
-  if(width > 767) {
-    parallaxIt();  
-  }
 
 })

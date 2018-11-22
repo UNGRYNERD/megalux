@@ -172,6 +172,16 @@
       color: #fff;
     }
   }
+  
+  &--white {
+    border-color: #fff;
+    color: #fff;
+    
+    &:hover{
+      background-color: #fff;
+      color: $azultitulos;
+    }
+  }
 }
 
 //BLOQUE DOBLE
@@ -256,4 +266,119 @@
       margin-bottom: 24px;
     }
   }
+}
+
+//CONTACTO
+.box-content {
+  background-color: $azulclaro;
+  
+  .box-address {
+    margin-bottom: 20px;
+    
+    &:nth-child(3) {
+      margin-bottom: 40px;
+    }
+    
+    h5{
+      text-transform: uppercase;
+      font-family: $tipo-bold;
+      font-weight: bold;
+      color: $azultitulos;
+    } 
+
+    h6, p, a{
+      color: $grisclaro;
+      font-family: $tipo-bold;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    p, a {
+      font-family: $tipo-regular;
+      font-weight: 400;
+    }
+    
+    a {
+      color: $azulsubtitulos;
+    }
+  
+  }
+  
+  .box-banner {
+    position: relative;
+    
+    .banner-info {
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      padding: 20px;
+      top: 50%;
+      left: 50%;
+      @include transform(translate(-50%, -50%));
+      
+      h3{
+        margin-bottom: 20px;
+        color: #fff;
+      }
+      
+      a {
+        text-transform: uppercase;
+        font-size: 12px;
+        padding: 5px 7px;
+      }
+    }
+  }
+  
+
+}
+
+form.wpcf7-form {
+  input, textarea {
+    width: 100%;
+    display: block;
+    border: 1px solid #c5d7f3;
+    background-color: #fbfbfc;
+    border-radius: 3px;
+    color: $azulsubtitulos;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px 20px 11px 20px;
+    resize: none;
+    margin-bottom: 20px;
+  }
+  
+  .button-box {
+    float: left;
+  }
+  
+  input[type="submit"] {
+    width: auto;
+    font-size: 15px;
+    text-transform: uppercase;
+    @extend .button;
+    @extend .button--blue;
+    cursor: pointer;
+  }
+  
+  .privacy-policy {
+    color: #769ad0;
+    font-size: 13px;
+    font-style: italic;
+    max-width: 175px;
+    width: 100%;
+    line-height: 17px;
+    float: left;
+    
+    a {
+      color: #769ad0;
+      font-size: 13px;
+      font-style: italic;
+      text-decoration: underline;
+    }
+    
+  }
+}
+
+#map {
+  height: 400px;
 }
