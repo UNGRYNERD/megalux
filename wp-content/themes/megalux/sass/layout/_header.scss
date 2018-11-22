@@ -1,3 +1,59 @@
+.top-header {
+  background-color: $azultop;
+  height: 25px;
+  
+  a {
+    font-size: 12px;
+    padding: 0 5px;
+    color: $azultextotop;
+    font-family: $tipo-bold;
+  }
+  
+  .link-tel {
+    color: $azultitulos;
+  }
+}
+
+header {
+  background-color: rgba(5, 10, 36, 0.2);
+  position: absolute;
+  top: 25px;
+  left: 0;
+  right: 0;
+  z-index: 6;
+  
+  .content-logo {
+    position: absolute;
+    z-index: 7;
+    left: 50%;
+    top: -25px;
+    @include transform(translate(-50%));
+  }
+  
+}
+
 .navbar {
   list-style: none;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+  
+  .nav-link {
+    color: #fff;
+    padding: 8px 25px;
+  }
+  
+  .dropdown-toggle {
+    &:after {
+      position: absolute;
+      right: 10px;
+      top: 40%;
+      border: solid #fff;
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+      padding: 3px;
+      vertical-align: middle;
+      @include transform(rotate(45deg));
+    }
+  }
 }

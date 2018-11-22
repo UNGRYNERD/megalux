@@ -91,6 +91,19 @@ function get_image_size($image = null, $size = 'large' ) {
     }
 }
 
+function print_thumbnail($id,$size="large"){
+    $thumb_id = get_post_thumbnail_id( $id );
+    $thumbnail = get_post( $thumb_id );
+
+    $title = $thumbnail->post_title;
+    $description = $thumbnail->post_content;
+    $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
+    $url = wp_get_attachment_image_src( get_post_thumbnail_id( $id ), $size );  // Esto devuelve un array...
+    $url = $url[0];    // Pero sólo nos interesa ese valor.
+
+    return ("<img src='".$url."' title='".$title."' alt='".$alt."' description='".$description."'>");
+}
+
 // CUSTOM PAGE NAV --------
 
 function custom_page_nav() {

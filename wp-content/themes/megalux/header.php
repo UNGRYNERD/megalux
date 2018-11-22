@@ -25,13 +25,26 @@
       } */
       
       ?>
+      
+      <div class="top-header">
+        <div class="container">
+          <div class="col-6">
+            <a href="#" class="link-tel">+34 963 640 059</a>
+            <a href="#">Trabaja con nosotros</a>
+          </div>
+          <div class="col-6">
+            <div class="social-box">
+              
+            </div>
+          </div>
+        </div>
+      </div>
 
       <header class="header">
         <div class="container">
-          <div class="row justify-content-lg-center ">
+          <div class="row justify-content-between">
 
-               <nav class="navbar navbar-custom align-items-start flex-column <?php echo $open;?>" role="navigation">
-                 <div class="w-100">
+               <nav class="col-5 navbar navbar-custom align-items-start flex-column <?php echo $open;?>" role="navigation">
                    <?php
 
                     wp_nav_menu( array(
@@ -44,10 +57,10 @@
                     ) );
                     ?>
 
-                 </div>
+
               </nav>
              
-              <div class="col">
+              <div class="content-logo">
                 <a href="<?php echo home_url();?>">
                  <?php if ( function_exists( 'the_custom_logo' ) ) {
                       the_custom_logo();
@@ -57,8 +70,7 @@
                 </a>
               </div> 
               
-             <nav class="navbar navbar-custom align-items-start flex-column <?php echo $open;?>" role="navigation">
-               <div class="w-100">
+             <nav class="col-4 navbar navbar-custom align-items-end flex-column <?php echo $open;?>" role="navigation">
                  <?php
 
                   wp_nav_menu( array(
@@ -70,11 +82,9 @@
                     'walker'            => new WP_Bootstrap_Navwalker(),
                   ) );
                   ?>
-
-               </div>
             </nav> 
 
-              <div class="col-5 align-self-center d-flex justify-content-end">
+              <div class="col-5 align-self-center d-flex justify-content-end d-lg-none">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                   <span></span>
                   <span></span>
