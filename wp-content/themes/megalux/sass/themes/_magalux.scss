@@ -135,6 +135,17 @@
     margin: 0;
     @include transition(ease all 0.5s);
   }
+  
+  &--bg {
+    min-height: 210px;
+    background-size: cover;
+    background-position: center;
+    
+    p {
+      font-size: 20px;
+    }
+  }
+
 }
 
 .row-buttons {
@@ -181,6 +192,22 @@
       background-color: #fff;
       color: $azultitulos;
     }
+  }
+  
+  &--filter {
+    padding: 9px 22px;
+    margin: 0 5px 20px;
+    border-width: 1px;
+    cursor: pointer;
+    
+    &.is-checked{
+      background-color: $azulboton; 
+      color: #fff;
+    }
+  }
+  
+  &:focus, &:active, &:focus:active {
+    outline: none;
   }
 }
 
@@ -243,6 +270,10 @@
     }
   }
   
+  .box-clientes {
+    background-color: #fff;
+  }
+  
   .row-buttons {padding: 30px 0 0;}
   
   .button {
@@ -269,7 +300,7 @@
 }
 
 //CONTACTO
-.box-content {
+.box-contact {
   background-color: $azulclaro;
   
   .box-address {
@@ -382,3 +413,54 @@ form.wpcf7-form {
 #map {
   height: 400px;
 }
+
+//LISTADO PROYECTOS
+.box-proyectos {
+  background-color: $azulclaro;
+  padding: 30px 0;
+}
+
+.category-list {
+  margin-bottom: 20px;
+}
+  
+
+
+.box-relacionado {
+  background-color: #fff;
+}
+
+// Single proyecto
+.box-info-post {
+  background-color: $azulclaro;
+}
+
+.single-content {
+  &--proyectos {
+    .box-header {
+     height: 170px;
+    }
+    
+    .info-post {
+      h1 {
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 35px;
+      }
+      
+      .content {
+        border-top: 1px solid #dcdcdc;
+        border-bottom: 1px solid #dcdcdc;
+        padding: 20px 0;
+      }
+    }
+    
+    .box-cta{
+      margin: 90px 0 60px;
+      display: block;
+    }
+  }
+  
+  
+}
+

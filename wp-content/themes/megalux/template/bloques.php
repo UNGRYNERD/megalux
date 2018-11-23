@@ -277,14 +277,14 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
         
         <?php }         
         
-        //caja de texto
+        //banner
         if($item[acf_fc_layout] == 'banner') {?>
         
           <section class="box-content box-banner">
             <div class="container">
               <div class="row">
                 <?php if($item[imagen_banner] && $item[url_banner]){?>
-                  <div class="col-12">
+                  <div class="col-12 text-center">
                     <a href="<?php echo $item[url_banner];?>">
                       <img class="img-border" src="<?php echo $item[imagen_banner][url];?>" alt="<?php echo $item[imagen_banner][alt]?>" title="<?php echo $item[imagen_banner][title]?>">
                     </a>

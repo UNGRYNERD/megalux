@@ -32,9 +32,14 @@ h5 {
 
 
 p {
-  font-size: 17px;
+  font-size: 14px;
   line-height: 24px;
   margin-bottom: 20px;
+  
+  a {
+    color: inherit;
+    font-weight: bold;
+  }
 }
 
 strong {font-family: $tipo-bold;}
