@@ -71,9 +71,6 @@ function jkpress_setup() {
 endif;
 add_action( 'after_setup_theme', 'jkpress_setup' );
 
-// CUSTOM LOGO
-add_theme_support( 'custom-logo' );
-
 // GET POST IMAGE
 
 function post_image_size($size = 'large') {
@@ -546,4 +543,16 @@ function numeric_posts_nav() {
  
     echo '</ul></div>' . "\n";
  
+}
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Página de opciones',
+		'menu_title'	=> 'Página de opciones',
+		'menu_slug' 	=> 'general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+	
 }

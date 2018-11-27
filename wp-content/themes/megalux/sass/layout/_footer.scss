@@ -1,3 +1,82 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the footer of the site/application.
-// -----------------------------------------------------------------------------
+.box-content.box-newsletter {
+  background: linear-gradient(to right, rgba(106,159,238,1) 0%, rgba(32,93,185,1) 100%);
+  padding: 40px 0 30px;
+  
+  h3 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 35px;
+  }
+  
+  form.wpcf7-form {
+  
+    input {
+      background: transparent;
+      border: 2px solid #fff;
+      color: #fff;
+      height: 45px;
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+     input[type="submit"] {
+      background-color: #fff;
+      color: $azultexto !important;
+      border: 2px solid #fff !important;
+      width: 100%;
+      font-size: 14px;
+      text-transform: capitalize;
+
+      &:hover {
+        background-color: rgba(255,255,255,0.6) !important;
+      }
+    }
+    
+    span {
+      color: #fff;
+    }
+    
+    .wpcf7-response-output {
+      color: #fff; 
+      border-color: #fff;
+    }
+  }
+  
+  p {
+    color: $azultitulos;
+  }
+}
+
+.footer {
+  padding: 50px 0 0;
+  background: linear-gradient(to right, rgba(57,86,145,1) 0%, rgba(20,54,118,1) 100%);
+  color: $azulboton;
+  
+  a {
+    color: $azulboton;
+  }
+  
+  .footer-logo{
+    img {
+      margin: 0 20px 30px 0;
+    }
+  }
+  
+  .row-legales {
+    .content {
+      border-top: 1px solid $azulboton;
+      margin-top: 25px;
+      padding: 15px 0 10px;
+      
+      p, a {
+        display: inline-block;
+        color: $azulboton;
+      }
+      
+      a {
+        text-decoration: underline;
+        margin: 0 3px 5px;
+      }
+    }
+  }
+}

@@ -15,22 +15,21 @@
         </div>
       </div>
       
-      <?php 
-      // Detectar idioma y asignar variable con id traduccion
-      /*if (ICL_LANGUAGE_CODE == 'es') { 
-         $traduccion = '120'; 
-      } elseif (ICL_LANGUAGE_CODE == 'en') {
-          $traduccion = '130'; 
-      } */
-      
-      ?>
-      
       <div class="top-header">
         <div class="container">
+          <?php if(get_field('telefono_superior', 'option') || get_field('enlace', 'option')) {?>
           <div class="col-6">
-            <a href="#" class="link-tel">+34 963 640 059</a>
-            <a href="#">Trabaja con nosotros</a>
+            <?php if(get_field('telefono_superior', 'option')){?>
+              <a href="tel:<?php formatPhone(get_field('telefono_superior', 'option'));?>" class="link-tel">
+                <?php the_field('telefono_superior', 'option');?>
+              </a>
+            <?php } if(get_field('enlace', 'option')){?>
+              <a href="<?php echo get_permalink(get_field('enlace', 'option')->ID)?>">
+                <?php echo get_field('enlace', 'option')->post_title;?>
+              </a>
+            <?php }?>
           </div>
+          <?php }?>
           <div class="col-6">
             <div class="social-box">
               
@@ -58,16 +57,25 @@
 
 
               </nav>
-             
-              <div class="content-logo">
-                <a href="<?php echo home_url();?>">
-                 <?php if ( function_exists( 'the_custom_logo' ) ) {
-                      the_custom_logo();
-                  } else {?>
-                    <img class="logo" src="<?php echo get_template_directory_uri();?>/img/logo.png" alt="logo">
-                  <?php }?>
-                </a>
-              </div> 
+              <?php if(get_field('logo', 'option') || get_field('logo_scroll', 'option') || get_field('logo_movil', 'option') ){?>
+                <div class="content-logo">
+                  <a href="<?php echo home_url();?>">
+                    <?php if ( get_field('logo', 'option')) { ?>
+                     
+                      <img class="logo" src="<?php echo get_field('logo', 'option')[url];?>" alt="<?php echo get_field('logo', 'option')[alt];?>" title="<?php echo get_field('logo', 'option')[title];?>">
+                      
+                    <?php } if ( get_field('logo_scroll', 'option')) { ?>
+                     
+                      <img class="logo__scroll" src="<?php echo get_field('logo_scroll', 'option')[url];?>" alt="<?php echo get_field('logo_scroll', 'option')[alt];?>" title="<?php echo get_field('logo_scroll', 'option')[title];?>">
+                      
+                    <?php } if ( get_field('logo_movil', 'option')) { ?>
+                     
+                      <img class="logo__movil" src="<?php echo get_field('logo_movil', 'option')[url];?>" alt="<?php echo get_field('logo_movil', 'option')[alt];?>" title="<?php echo get_field('logo_movil', 'option')[title];?>">
+                      
+                    <?php }?>
+                  </a>
+                </div> 
+              <?php }?>
               
              <nav class="col-4 navbar navbar-custom align-items-end flex-column <?php echo $open;?>" role="navigation">
                  <?php

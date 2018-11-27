@@ -4,7 +4,7 @@
 * Template name: Productos
 */
 
-$producto = 352;
+$producto = get_field('pagina_de_productos','option');;
 
 include('header.php');?>
 

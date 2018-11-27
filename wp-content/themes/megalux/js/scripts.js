@@ -81,5 +81,21 @@ $(document).ready(function() {
     // triggers winodw scroll for refresh
     $fwindow.trigger('scroll');
   };
+  
+  // EVENTOS EN SCROLL
+  $(window).scroll(function() {
+    
+    var width = $(window).width();
+    
+    if(width > 991) {
+      // MENU FIXED CON SCROLL
+      if ($(this).scrollTop() > 30){  
+        $('header').addClass("sticky-header");
+      } else{
+        $('header').removeClass("sticky-header");
+      } 
+    }
+
+  });
 
 })

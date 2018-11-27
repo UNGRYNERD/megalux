@@ -1,4 +1,7 @@
 <?php include('header.php');
+
+$proyecto = get_field('pagina_de_proyectos', 'option');
+
 if (have_posts()) : while (have_posts()) : the_post();?>
 
 <main class="single-content single-content--<?php echo $post->post_type?>">
@@ -11,7 +14,7 @@ if (have_posts()) : while (have_posts()) : the_post();?>
       <div class="col-12 col-paginacion">
          <div class="row justify-content-between">
           <div class="col-4">
-            <a class="all-projects" href="<?php echo home_url('/proyectos/');?>">
+            <a class="all-projects" href="<?php echo get_permalink($proyecto);?>">
               <span></span>
               <span></span>
             </a>
