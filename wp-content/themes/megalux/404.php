@@ -1,7 +1,4 @@
 <?php
-/**
- * Template name: 404
-*/
 
 include('header.php'); ?>
 

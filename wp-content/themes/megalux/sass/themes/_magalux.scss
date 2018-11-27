@@ -145,6 +145,22 @@
       font-size: 20px;
     }
   }
+  
+  // Archive
+  &.col-archive {
+    border: 1px solid #eceef0;
+    
+    img {
+      @include transition(0.5s ease all);
+    }
+    
+    &:hover{
+      img{
+        -webkit-filter: brightness(130%);
+        filter: brightness(130%);
+      }
+    }
+  }
 
 }
 
@@ -195,7 +211,7 @@
   }
   
   &--filter {
-    padding: 9px 22px;
+    padding: 5px 22px;
     margin: 0 5px 20px;
     border-width: 1px;
     cursor: pointer;
@@ -235,7 +251,7 @@
 
     p {
       color: #000;
-      font-size: 16px;
+//      font-size: 16px;
     }
   }
 }
@@ -436,9 +452,10 @@ form.wpcf7-form {
 }
 
 .single-content {
-  &--proyectos {
+  &--proyecto {
     .box-header {
-     height: 170px;
+      height: 170px;
+      background-image: url('../img/background-project.jpg');
     }
     
     .info-post {
@@ -461,6 +478,284 @@ form.wpcf7-form {
     }
   }
   
+  &--productos {
+    
+    h1 {
+      font-size: 30px;
+      line-height: 40px;
+      margin-bottom: 20px;
+    }
+    .row-buttons {
+      padding: 20px 0 40px;
+      
+      .button {
+        border-width: 1px;
+        padding: 14px 60px;
+        
+        img {
+          width: 20px;
+          margin-left: 10px;
+        }
+        
+        &:hover{
+          background-color: transparent;
+          color: $azulboton;
+        }
+      }
+    }
+  }
   
 }
 
+// Slider con miniaturas
+.thumbslider{
+  width:100%;
+  
+  .lSSlideOuter {
+    ul {
+      list-style: none outside none;
+      padding-left: 0;
+      margin-bottom:0;
+
+      li {
+        display: block;
+        float: left;
+        margin-right: 6px;
+        cursor:pointer;
+
+        img {
+          display: block;
+          height: auto;
+          max-width: 100%;
+          @include transition(0.5s ease all);
+        }
+      }
+      
+
+      
+    }
+    
+    .lSPager.lSGallery {
+      li.active {
+        border-radius: 0 !important;
+        overflow: hidden;
+
+        img {
+          @include transform(scale(1.2));
+        }
+      }
+      
+      li:hover {
+        border-radius: 0 !important;
+      }
+    }
+    
+    .lSPrev, .lSNext{
+      background-color: #99978e;
+      background-image: url(../img/icons/arrow-left.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 8px;
+      width: 40px;
+      height: 40px;
+      opacity: 1;
+    }
+    
+    .lSNext{
+      background-image: url(../img/icons/arrow-right.svg);
+    }  
+  }
+
+}
+
+// Paginación proyectos
+.col-paginacion:after {
+  border-bottom: 1px solid #dcdcdc;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  content: "";
+  width: 100%;
+  height: 1px;
+  display: block;
+}
+
+.col-paginacion {
+  
+  .all-projects {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    float: left;
+    border-radius: 3px;
+    border: 1px solid;
+    color: $azulsubtitulos;
+
+    span {
+      position: absolute;
+      border-left: 6px solid;
+      border-right: 6px solid;
+      height: 6px;
+      width: 17px;
+      left: 11px;
+      top: 11px;
+
+      &:last-of-type{
+        top: 22px;
+      }
+    }
+
+    &:hover {
+      color: $azultexto
+    }
+  }
+  
+  .button {
+    border-width: 1px;
+    text-transform: uppercase;
+    padding: 7px 17px;
+    
+    &.next-link:after,  &.prev-link:before {
+      content: "";
+      position: relative;
+      display: block;
+      border: solid ;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px;
+    }
+    
+    &.next-link{
+      &:after{
+        margin-left: 10px;
+        @include transform(rotate(-45deg));
+      }
+    }
+    
+    &.prev-link{
+      &:before{
+        margin-right: 10px;
+        @include transform(rotate(135deg));
+      }
+    }
+  }
+}
+
+// Paginacion numerica
+.post-navigation {
+  
+  border-top: 1px solid #dcdcdc;
+  margin-top: 40px;
+  padding-top: 30px;
+  
+  ul {
+    padding: 0;
+    
+    li {
+      list-style: none;
+      display: inline-block;
+      
+      a {
+        border: 1px solid #d2d2d2;
+        background-color: #fff;
+        color: $azulsubtitulos;
+        font-size: 15px;
+        margin: 2px 4px 2px 0;
+        min-width: 30px;
+        padding: 2px 10px;
+        display: inline-block;
+        border-radius: 5px;
+      }
+      
+      &.active {
+        a {
+          background-color: $azultitulos;
+          border-color: $azultitulos;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+//ARCHIVE 
+.page-product {
+  .box-header {
+    background-image: url('../img/background-product.jpg');
+    
+    h1 {
+      font-size: 40px;
+      line-height: 34px;
+      margin-bottom: 10px;
+    }
+  }
+  
+  .content {
+    margin: 30px 0;
+    padding: 40px 0;
+    border-top: 1px solid $azultop;
+  }
+}
+
+.sidebar-taxonomy {
+  
+  margin-bottom: 50px;
+    
+  h4 {
+    text-transform: uppercase;
+    color: $azulboton;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  
+  .panel {
+    
+    border-top: 1px solid $azultop;
+        
+    .panel-header {
+      position: relative;
+      
+      .btn-link {
+        color: $azultitulos;
+        padding: 11px 0 9px;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+      
+      &:after{
+        content: "";
+        position: absolute;
+        right: 10px;
+        top: 44%;
+        border: solid $azultitulos;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 3px;
+        vertical-align: middle;
+        @include transform(rotate(45deg));
+      }
+      
+    }
+    
+    .panel-body {
+      a, .btn-link {
+        display: block;
+        color: $azultitulos;
+        font-family: $tipo-bold;
+        padding: 10px 0;
+        border-top: 1px solid $azultop;
+      }
+      
+      .btn-link {
+        border: none;
+        font-size: 14px;
+      }
+      
+      .panel-body {
+        a {
+          color: $azulsubtitulos;
+        }
+      }
+    }
+  }
+}

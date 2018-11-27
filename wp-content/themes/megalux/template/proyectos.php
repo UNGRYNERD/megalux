@@ -50,11 +50,14 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
       <div id="container" class="row">
 
         <?php 
-        
-          
+
+          $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+
           $args = array(
-            'post_type' => 'proyectos',
-            'posts_per_page' => -1
+            'post_type' => 'proyecto',
+            'posts_per_page' => 75,
+            'paged' => $paged,
+            
           );
           query_posts($args);
           
@@ -75,10 +78,18 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                     </a>
                   </div>
 
-            <?php } 
-          } wp_reset_query();?>
+            <?php } ?> 
+          </div>
+          
+           <div class="row">
+             <div class="col-12">
+                <?php numeric_posts_nav(); ?>
+              </div>
+           </div>
 
-      </div>
+          <?php } wp_reset_query();?>
+
+      
     </div>
   </section>
   
@@ -98,31 +109,30 @@ include( get_template_directory() . '/footer.php'); ?>
 
 $(document).ready(function(){
     setTimeout(function(){
-        var $container = $('#container').isotope({
-            itemSelector : '.item',
-            isFitWidth: true
-        });
+      var $container = $('#container').isotope({
+        itemSelector : '.item',
+        isFitWidth: true
+      });
 
-        $container.isotope({ filter: '<?php echo $setFilter; ?>' });
+      $container.isotope({ filter: '<?php echo $setFilter; ?>' });
 
-        $('#filters, #filters-mobile').on( 'click', 'button', function() {
+      $('#filters, #filters-mobile').on( 'click', 'button', function() {
 
-            var filterValue = $(this).attr('data-filter');
-            $container.isotope({ filter: filterValue });            
+        var filterValue = $(this).attr('data-filter');
+        $container.isotope({ filter: filterValue });            
 
-
-        });
+      });
 
     }, 1400);
   
-      // change is-checked class on buttons
-      $('.category-list').each( function( i, buttonGroup ) {
-          var $buttonGroup = $( buttonGroup );
-              $buttonGroup.on( 'click', 'button', function() {
-              $buttonGroup.find('.is-checked').removeClass('is-checked');
-              $( this ).addClass('is-checked');
-          });
+    // change is-checked class on buttons
+    $('.category-list').each( function( i, buttonGroup ) {
+      var $buttonGroup = $( buttonGroup );
+        $buttonGroup.on( 'click', 'button', function() {
+        $buttonGroup.find('.is-checked').removeClass('is-checked');
+        $( this ).addClass('is-checked');
       });
+    });
 })
 
 </script>

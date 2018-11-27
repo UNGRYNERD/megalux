@@ -8785,161 +8785,170 @@ img.aligncenter {
     /* line 144, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
     .col-project--bg p {
       font-size: 20px; }
+  /* line 150, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+  .col-project.col-archive {
+    border: 1px solid #eceef0; }
+    /* line 153, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+    .col-project.col-archive img {
+      transition: 0.5s ease all; }
+    /* line 158, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+    .col-project.col-archive:hover img {
+      -webkit-filter: brightness(130%);
+      filter: brightness(130%); }
 
-/* line 151, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+/* line 167, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
 .row-buttons {
   padding: 80px 0; }
 
-/* line 155, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+/* line 171, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
 .button, form.wpcf7-form input[type="submit"] {
   padding: 9px 40px;
   display: inline-block;
   border-radius: 2px;
   background-color: transparent;
   transition: ease all 0.5s; }
-  /* line 162, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+  /* line 178, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
   .button--outline {
     border: 2px solid; }
-  /* line 167, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+  /* line 183, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
   .button--blue, form.wpcf7-form input[type="submit"] {
     border-color: #6a9fee;
     color: #6a9fee; }
-    /* line 171, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+    /* line 187, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
     .button--blue:hover, form.wpcf7-form input[type="submit"]:hover {
       background-color: #6a9fee;
       color: #fff; }
-  /* line 177, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+  /* line 193, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
   .button--blue--dark {
     border-color: #080f33;
     color: #080f33; }
-    /* line 181, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+    /* line 197, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
     .button--blue--dark:hover {
       background-color: #080f33;
       color: #fff; }
-  /* line 187, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+  /* line 203, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
   .button--white {
     border-color: #fff;
     color: #fff; }
-    /* line 191, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+    /* line 207, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
     .button--white:hover {
       background-color: #fff;
       color: #080f33; }
-  /* line 197, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+  /* line 213, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
   .button--filter {
-    padding: 9px 22px;
+    padding: 5px 22px;
     margin: 0 5px 20px;
     border-width: 1px;
     cursor: pointer; }
-    /* line 203, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+    /* line 219, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
     .button--filter.is-checked {
       background-color: #6a9fee;
       color: #fff; }
-  /* line 209, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+  /* line 225, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
   .button:focus, form.wpcf7-form input[type="submit"]:focus, .button:active, form.wpcf7-form input[type="submit"]:active, .button:focus:active, form.wpcf7-form input[type="submit"]:focus:active {
     outline: none; }
 
-/* line 215, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+/* line 231, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
 .box-doble {
   background-color: #f0f6ff; }
-  /* line 219, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+  /* line 235, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
   .box-doble .content ul {
     list-style: none;
     padding: 0; }
-    /* line 224, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+    /* line 240, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
     .box-doble .content ul li img {
       display: inline-block;
       width: 29px;
       height: 29px;
       margin: 9px 30px 0px 0px; }
-    /* line 230, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+    /* line 246, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
     .box-doble .content ul li p {
       display: inline-block; }
-  /* line 236, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+  /* line 252, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
   .box-doble .content p {
-    color: #000;
-    font-size: 16px; }
+    color: #000; }
 
-/* line 245, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+/* line 261, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
 .img-border {
   padding: 6px;
   box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1); }
 
-/* line 251, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+/* line 267, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
 .box-banner {
   background-color: #f0f6ff; }
 
-/* line 255, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+/* line 271, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
 .img-banner {
   padding: 6px;
   border: 1px solid #ebebeb; }
 
-/* line 263, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+/* line 279, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
 .home .box-proyectos {
   background-color: #f0f6ff; }
-  /* line 266, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+  /* line 282, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
   .home .box-proyectos h2 {
     color: #080f33;
     font-size: 25px;
     margin-bottom: 50px; }
 
-/* line 273, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+/* line 289, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
 .home .box-clientes {
   background-color: #fff; }
 
-/* line 277, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+/* line 293, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
 .home .row-buttons {
   padding: 30px 0 0; }
 
-/* line 279, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+/* line 295, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
 .home .button, .home form.wpcf7-form input[type="submit"], form.wpcf7-form .home input[type="submit"] {
   border-width: 1px; }
-  /* line 282, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+  /* line 298, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
   .home .button--blue, .home form.wpcf7-form input[type="submit"], form.wpcf7-form .home input[type="submit"] {
     border-color: #080f33;
     color: #080f33; }
-    /* line 286, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+    /* line 302, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
     .home .button--blue:hover, .home form.wpcf7-form input[type="submit"]:hover, form.wpcf7-form .home input[type="submit"]:hover {
       background-color: #080f33;
       color: #fff; }
 
-/* line 294, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+/* line 310, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
 .home .content p {
   font-size: 14px;
   color: #080f33;
   margin-bottom: 24px; }
 
-/* line 303, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+/* line 319, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
 .box-contact {
   background-color: #f0f6ff; }
-  /* line 306, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+  /* line 322, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
   .box-contact .box-address {
     margin-bottom: 20px; }
-    /* line 309, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+    /* line 325, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
     .box-contact .box-address:nth-child(3) {
       margin-bottom: 40px; }
-    /* line 313, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+    /* line 329, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
     .box-contact .box-address h5 {
       text-transform: uppercase;
       font-family: "lato-bold";
       font-weight: bold;
       color: #080f33; }
-    /* line 320, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+    /* line 336, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
     .box-contact .box-address h6, .box-contact .box-address p, .box-contact .box-address a {
       color: #a1a1a1;
       font-family: "lato-bold";
       font-weight: bold;
       font-size: 14px; }
-    /* line 327, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+    /* line 343, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
     .box-contact .box-address p, .box-contact .box-address a {
       font-family: "lato-regular";
       font-weight: 400; }
-    /* line 332, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+    /* line 348, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
     .box-contact .box-address a {
       color: #a1b1bc; }
-  /* line 338, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+  /* line 354, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
   .box-contact .box-banner {
     position: relative; }
-    /* line 341, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+    /* line 357, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
     .box-contact .box-banner .banner-info {
       width: 100%;
       text-align: center;
@@ -8951,17 +8960,17 @@ img.aligncenter {
       -moz-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%); }
-      /* line 350, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+      /* line 366, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
       .box-contact .box-banner .banner-info h3 {
         margin-bottom: 20px;
         color: #fff; }
-      /* line 355, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+      /* line 371, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
       .box-contact .box-banner .banner-info a {
         text-transform: uppercase;
         font-size: 12px;
         padding: 5px 7px; }
 
-/* line 367, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+/* line 383, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
 form.wpcf7-form input, form.wpcf7-form textarea {
   width: 100%;
   display: block;
@@ -8975,18 +8984,18 @@ form.wpcf7-form input, form.wpcf7-form textarea {
   resize: none;
   margin-bottom: 20px; }
 
-/* line 381, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+/* line 397, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
 form.wpcf7-form .button-box {
   float: left; }
 
-/* line 385, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+/* line 401, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
 form.wpcf7-form input[type="submit"] {
   width: auto;
   font-size: 15px;
   text-transform: uppercase;
   cursor: pointer; }
 
-/* line 394, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+/* line 410, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
 form.wpcf7-form .privacy-policy {
   color: #769ad0;
   font-size: 13px;
@@ -8995,53 +9004,283 @@ form.wpcf7-form .privacy-policy {
   width: 100%;
   line-height: 17px;
   float: left; }
-  /* line 403, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+  /* line 419, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
   form.wpcf7-form .privacy-policy a {
     color: #769ad0;
     font-size: 13px;
     font-style: italic;
     text-decoration: underline; }
 
-/* line 413, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+/* line 429, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
 #map {
   height: 400px; }
 
-/* line 418, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+/* line 434, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
 .box-proyectos {
   background-color: #f0f6ff;
   padding: 30px 0; }
 
-/* line 423, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+/* line 439, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
 .category-list {
   margin-bottom: 20px; }
 
-/* line 429, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+/* line 445, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
 .box-relacionado {
   background-color: #fff; }
 
-/* line 434, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+/* line 450, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
 .box-info-post {
   background-color: #f0f6ff; }
 
-/* line 440, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
-.single-content--proyectos .box-header {
-  height: 170px; }
+/* line 456, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+.single-content--proyecto .box-header {
+  height: 170px;
+  background-image: url("../img/background-project.jpg"); }
 
-/* line 445, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
-.single-content--proyectos .info-post h1 {
+/* line 462, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+.single-content--proyecto .info-post h1 {
   font-size: 24px;
   line-height: 36px;
   margin-bottom: 35px; }
 
-/* line 451, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
-.single-content--proyectos .info-post .content {
+/* line 468, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+.single-content--proyecto .info-post .content {
   border-top: 1px solid #dcdcdc;
   border-bottom: 1px solid #dcdcdc;
   padding: 20px 0; }
 
-/* line 458, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
-.single-content--proyectos .box-cta {
+/* line 475, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+.single-content--proyecto .box-cta {
   margin: 90px 0 60px;
   display: block; }
+
+/* line 483, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+.single-content--productos h1 {
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 20px; }
+
+/* line 488, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+.single-content--productos .row-buttons {
+  padding: 20px 0 40px; }
+  /* line 491, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+  .single-content--productos .row-buttons .button, .single-content--productos .row-buttons form.wpcf7-form input[type="submit"], form.wpcf7-form .single-content--productos .row-buttons input[type="submit"] {
+    border-width: 1px;
+    padding: 14px 60px; }
+    /* line 495, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+    .single-content--productos .row-buttons .button img, .single-content--productos .row-buttons form.wpcf7-form input[type="submit"] img, form.wpcf7-form .single-content--productos .row-buttons input[type="submit"] img {
+      width: 20px;
+      margin-left: 10px; }
+    /* line 500, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+    .single-content--productos .row-buttons .button:hover, .single-content--productos .row-buttons form.wpcf7-form input[type="submit"]:hover, form.wpcf7-form .single-content--productos .row-buttons input[type="submit"]:hover {
+      background-color: transparent;
+      color: #6a9fee; }
+
+/* line 511, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+.thumbslider {
+  width: 100%; }
+  /* line 515, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+  .thumbslider .lSSlideOuter ul {
+    list-style: none outside none;
+    padding-left: 0;
+    margin-bottom: 0; }
+    /* line 520, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+    .thumbslider .lSSlideOuter ul li {
+      display: block;
+      float: left;
+      margin-right: 6px;
+      cursor: pointer; }
+      /* line 526, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+      .thumbslider .lSSlideOuter ul li img {
+        display: block;
+        height: auto;
+        max-width: 100%;
+        transition: 0.5s ease all; }
+  /* line 539, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+  .thumbslider .lSSlideOuter .lSPager.lSGallery li.active {
+    border-radius: 0 !important;
+    overflow: hidden; }
+    /* line 543, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+    .thumbslider .lSSlideOuter .lSPager.lSGallery li.active img {
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      transform: scale(1.2); }
+  /* line 548, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+  .thumbslider .lSSlideOuter .lSPager.lSGallery li:hover {
+    border-radius: 0 !important; }
+  /* line 553, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+  .thumbslider .lSSlideOuter .lSPrev, .thumbslider .lSSlideOuter .lSNext {
+    background-color: #99978e;
+    background-image: url(../img/icons/arrow-left.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 8px;
+    width: 40px;
+    height: 40px;
+    opacity: 1; }
+  /* line 564, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+  .thumbslider .lSSlideOuter .lSNext {
+    background-image: url(../img/icons/arrow-right.svg); }
+
+/* line 572, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+.col-paginacion:after {
+  border-bottom: 1px solid #dcdcdc;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  content: "";
+  width: 100%;
+  height: 1px;
+  display: block; }
+
+/* line 584, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+.col-paginacion .all-projects {
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  float: left;
+  border-radius: 3px;
+  border: 1px solid;
+  color: #a1b1bc; }
+  /* line 594, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+  .col-paginacion .all-projects span {
+    position: absolute;
+    border-left: 6px solid;
+    border-right: 6px solid;
+    height: 6px;
+    width: 17px;
+    left: 11px;
+    top: 11px; }
+    /* line 603, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+    .col-paginacion .all-projects span:last-of-type {
+      top: 22px; }
+  /* line 608, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+  .col-paginacion .all-projects:hover {
+    color: #3374d8; }
+
+/* line 613, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+.col-paginacion .button, .col-paginacion form.wpcf7-form input[type="submit"], form.wpcf7-form .col-paginacion input[type="submit"] {
+  border-width: 1px;
+  text-transform: uppercase;
+  padding: 7px 17px; }
+  /* line 618, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+  .col-paginacion .button.next-link:after, .col-paginacion form.wpcf7-form input.next-link[type="submit"]:after, form.wpcf7-form .col-paginacion input.next-link[type="submit"]:after, .col-paginacion .button.prev-link:before, .col-paginacion form.wpcf7-form input.prev-link[type="submit"]:before, form.wpcf7-form .col-paginacion input.prev-link[type="submit"]:before {
+    content: "";
+    position: relative;
+    display: block;
+    border: solid;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px; }
+  /* line 629, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+  .col-paginacion .button.next-link:after, .col-paginacion form.wpcf7-form input.next-link[type="submit"]:after, form.wpcf7-form .col-paginacion input.next-link[type="submit"]:after {
+    margin-left: 10px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  /* line 636, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+  .col-paginacion .button.prev-link:before, .col-paginacion form.wpcf7-form input.prev-link[type="submit"]:before, form.wpcf7-form .col-paginacion input.prev-link[type="submit"]:before {
+    margin-right: 10px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg); }
+
+/* line 645, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+.post-navigation {
+  border-top: 1px solid #dcdcdc;
+  margin-top: 40px;
+  padding-top: 30px; }
+  /* line 651, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+  .post-navigation ul {
+    padding: 0; }
+    /* line 654, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+    .post-navigation ul li {
+      list-style: none;
+      display: inline-block; }
+      /* line 658, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+      .post-navigation ul li a {
+        border: 1px solid #d2d2d2;
+        background-color: #fff;
+        color: #a1b1bc;
+        font-size: 15px;
+        margin: 2px 4px 2px 0;
+        min-width: 30px;
+        padding: 2px 10px;
+        display: inline-block;
+        border-radius: 5px; }
+      /* line 671, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+      .post-navigation ul li.active a {
+        background-color: #080f33;
+        border-color: #080f33;
+        color: #fff; }
+
+/* line 683, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+.page-product .box-header {
+  background-image: url("../img/background-product.jpg"); }
+  /* line 686, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+  .page-product .box-header h1 {
+    font-size: 40px;
+    line-height: 34px;
+    margin-bottom: 10px; }
+
+/* line 693, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+.page-product .content {
+  margin: 30px 0;
+  padding: 40px 0;
+  border-top: 1px solid #b8d1f5; }
+
+/* line 700, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+.sidebar-taxonomy {
+  margin-bottom: 50px; }
+  /* line 704, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+  .sidebar-taxonomy h4 {
+    text-transform: uppercase;
+    color: #6a9fee;
+    font-size: 16px;
+    margin-bottom: 30px; }
+  /* line 711, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+  .sidebar-taxonomy .panel {
+    border-top: 1px solid #b8d1f5; }
+    /* line 715, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+    .sidebar-taxonomy .panel .panel-header {
+      position: relative; }
+      /* line 718, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+      .sidebar-taxonomy .panel .panel-header .btn-link {
+        color: #080f33;
+        padding: 11px 0 9px;
+        margin-bottom: 10px;
+        font-size: 14px; }
+      /* line 725, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+      .sidebar-taxonomy .panel .panel-header:after {
+        content: "";
+        position: absolute;
+        right: 10px;
+        top: 44%;
+        border: solid #080f33;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 3px;
+        vertical-align: middle;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg); }
+    /* line 741, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+    .sidebar-taxonomy .panel .panel-body a, .sidebar-taxonomy .panel .panel-body .btn-link {
+      display: block;
+      color: #080f33;
+      font-family: "lato-bold";
+      padding: 10px 0;
+      border-top: 1px solid #b8d1f5; }
+    /* line 749, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+    .sidebar-taxonomy .panel .panel-body .btn-link {
+      border: none;
+      font-size: 14px; }
+    /* line 755, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+    .sidebar-taxonomy .panel .panel-body .panel-body a {
+      color: #a1b1bc; }
 
 /*# sourceMappingURL=style.css.map */

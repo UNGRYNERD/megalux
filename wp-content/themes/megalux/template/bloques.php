@@ -172,7 +172,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
         //proyectos destacados
         if($item[acf_fc_layout] == 'proyectos_destacados') {?>
         
-          <section class="box-content box-proyectos" >
+          <section class="box-content" >
             <div class="container">
               <div class="row">
                 <?php if($item[titulo]){?>
