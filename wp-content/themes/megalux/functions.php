@@ -101,81 +101,12 @@ function print_thumbnail($id,$size="large"){
     return ("<img src='".$url."' title='".$title."' alt='".$alt."' description='".$description."'>");
 }
 
-// CUSTOM PAGE NAV --------
-
-function custom_page_nav() {
-
-	if( is_singular() )
-		return;
-
-	global $wp_query;
-
-	/** Stop execution if there's only 1 page */
-	if( $wp_query->max_num_pages <= 1 )
-		return;
-
-	$paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
-	$max   = intval( $wp_query->max_num_pages );
-
-	/**	Add current page to the array */
-	if ( $paged >= 1 )
-		$links[] = $paged;
-
-	/**	Add the pages around the current page to the array */
-	if ( $paged >= 3 ) {
-		$links[] = $paged - 1;
-		$links[] = $paged - 2;
-	}
-
-	if ( ( $paged + 2 ) <= $max ) {
-		$links[] = $paged + 2;
-		$links[] = $paged + 1;
-	}
-
-	echo '<div class="box-pagination">';
-
-	/**	Previous Post Link */
-	if ( get_previous_posts_link() )
-        printf( '<a href="%s">%s</a>', esc_url(add_query_arg('pg', $paged - 1)), '<span class="pag-prev"></span>' );
-
-	/**	Link to first page, plus ellipses if necessary */
-	if ( ! in_array( 1, $links ) ) {
-		$class = 1 == $paged ? ' class="active"' : '';
-		printf( '<a href="%s"%s>%s</a>', esc_url(add_query_arg('pg', 1)), $class, '1' );
-		if ( ! in_array( 2, $links ) )
-			echo '...';
-	}
-
-	/**	Link to current page, plus 2 pages in either direction if necessary */
-	sort( $links );
-	foreach ( (array) $links as $link ) {
-		$class = $paged == $link ? ' class="active"' : '';
-		printf( '<a href="%s"%s>%s</a>', esc_url(add_query_arg('pg', $link)), $class, $link );
-	}
-
-	/**	Link to last page, plus ellipses if necessary */
-	if ( ! in_array( $max, $links ) ) {
-		if ( ! in_array( $max - 1, $links ) )
-			echo '...';
-		$class = $paged == $max ? ' class="active"' : '';
-		printf( '<a href="%s"%s>%s</a>', esc_url(add_query_arg('pg', $max)), $class, $max );
-	}
-
-	/**	Next Post Link */
-	if ( get_next_posts_link() )
-        printf( '<a href="%s">%s</a>', esc_url(add_query_arg('pg', $paged + 1)), '<span class="pag-next"></span>' );
-
-	echo '</div>';
-
-}
-
 // THEME SCRIPTS
 // Front
 function jk_scripts() {
   wp_enqueue_style( 'jk-theme-style', get_stylesheet_uri(), array(), '1.00' );
   wp_enqueue_style( 'jk-main-styles', get_template_directory_uri() . '/sass/style.css', array(), '0.01');
   
-
   if (!is_admin()) {
     wp_deregister_script('jquery');
     wp_enqueue_script(
