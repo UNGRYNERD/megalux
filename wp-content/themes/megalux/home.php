@@ -33,12 +33,12 @@ include( get_template_directory() . '/header.php');?>
           <div class="row">
             <?php 
 
-                if (!is_archive()){
+                if (is_home() ){
                   $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
                   $args = array(
                     'post_type' => 'post',
-                    'posts_per_page' => 1,
+                    'posts_per_page' => 12,
                     'paged' => $paged,
                   );
                   query_posts($args);
@@ -72,9 +72,16 @@ include( get_template_directory() . '/header.php');?>
                       <?php numeric_posts_nav(); ?>
                     </div>
                 <?php } 
-                }wp_reset_query();?>
+                } else {?>
+                <div class="col-12">
+                  <h3>No hay resultados</h3>
+                </div>
+                <?php } wp_reset_query();?>
             </div> 
           </div>
+          
+          <!-- SIDEBAR -->
+          <?php include('sidebar.php'); ?>
 
         </div>
       </div>

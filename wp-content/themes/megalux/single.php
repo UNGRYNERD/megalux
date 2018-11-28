@@ -43,6 +43,7 @@ $post_tags = get_the_tags();
                   }?>
                   <span>|</span>
                   <?php printf( _nx( '1 Comentario', '%1$s Comentarios', get_comments_number(), 'comments title', 'textdomain' ), number_format_i18n( get_comments_number() ) ); ?>
+                  <span>|</span>
                 </div>
               </div>
               <div class="post-content">
@@ -63,9 +64,7 @@ $post_tags = get_the_tags();
                     <?php }?>
                   </div>
                 <?php }?>
-               
-                
-                
+
               </div>
               
             </div>
@@ -73,6 +72,7 @@ $post_tags = get_the_tags();
           </div>   
           
           <!-- SIDEBAR -->
+          <?php include('sidebar.php'); ?>
 
       </div>
     </div>

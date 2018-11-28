@@ -807,7 +807,7 @@ form.wpcf7-form {
   .content {
     .box-img {
       width: 100%;
-      margin-bottom: 25px;
+      margin-bottom: 40px;
     }
     
     .box-post {
@@ -846,5 +846,87 @@ form.wpcf7-form {
   a {
     color: $azultextotop;
     font-style: italic;
+  }
+}
+
+// Sidebar blog 
+.sidebar-blog {
+  form {
+    position: relative;
+    margin-bottom: 50px;
+    
+    .inputsearch{
+      width: 100%;
+      border: 1px solid #eceef0;
+      background-color: #fff;
+      padding: 7px 20px;
+      color: $gris;
+    }
+    
+    label {
+      position: absolute;
+      right: 1px;
+      top: 1px;
+      bottom: 0;
+      height: 39px;
+      width: 39px;
+      color: $gris;
+      font-size: 16px;
+      background-color: #fff;
+      
+      i {
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        
+        @include transform(translateY(-50%));
+      }
+      
+      #searchsubmit{
+        opacity: 0;
+      }
+    }
+
+  }
+  
+  h4 {
+    text-transform: uppercase;
+    color: $azulboton;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  
+  .category-list {
+    margin-bottom: 50px;
+    
+    a {
+      border-top: 1px solid $azultop;
+      color: $azultitulos;
+      padding: 7px 0 ;
+      margin-bottom: 0;
+      font-size: 14px;
+      font-weight: 800;
+      font-family: $tipo-bold;
+      display: block;
+      text-transform: uppercase;
+    }
+  }
+  
+  .tags-list {
+    margin-bottom: 50px;
+    
+    a {
+      color: $azultitulos;
+      background-color: $azultop;
+      border-radius: 2px;
+      padding: 9px 12px;
+      display: inline-block;
+      margin: 0 7px 7px 0;
+      
+      &:hover {
+        color: #fff;
+        background-color: $azulboton;
+      }
+    }
   }
 }
