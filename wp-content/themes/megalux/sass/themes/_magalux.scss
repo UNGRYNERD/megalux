@@ -161,6 +161,15 @@
       }
     }
   }
+  
+  //Blog
+  &.col-post {
+    margin-bottom: 10px;
+    
+    p {
+      padding: 10px 50px;
+    }
+  }
 
 }
 
@@ -480,6 +489,10 @@ form.wpcf7-form {
   
   &--productos {
     
+    &.page-product{
+      background-color: #fff;
+    }
+    
     h1 {
       font-size: 30px;
       line-height: 40px;
@@ -757,5 +770,81 @@ form.wpcf7-form {
         }
       }
     }
+  }
+}
+
+// BLOG 
+.blog-page{
+  .box-header {
+    background-image: url('../img/blog-background.jpg');
+  }
+}
+
+.box-post {
+  .info-post{
+    margin-bottom: 30px;
+    color: $azulsubtitulos;
+    
+    a {
+      color: inherit;
+    }
+    
+    span{
+      margin: 0 5px;
+      display: inline-block;
+    }
+  }
+}
+
+//POST
+.single-post {
+  background-color: $azulclaro;
+  
+  .box-header {
+    background-image: url('../img/background-single-post.jpg');
+  }
+
+  .content {
+    .box-img {
+      width: 100%;
+      margin-bottom: 25px;
+    }
+    
+    .box-post {
+      margin-bottom: 25px;
+      border-bottom: 1px solid #dcdcdc;
+
+      h1 {
+        font-size: 36px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+.box-tags {
+  position: relative;
+  border: 1px solid #eceef0;
+  padding-left: 70px;
+  height: 50px;
+  line-height: 50px;
+  
+  span {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    background-color: $azultitulos;
+    font-size: 16px;
+    color: #fff;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    display: inline-block;
+    line-height: 50px;
+  }
+  
+  a {
+    color: $azultextotop;
+    font-style: italic;
   }
 }
