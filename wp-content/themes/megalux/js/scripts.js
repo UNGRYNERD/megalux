@@ -10,6 +10,20 @@ $(document).ready(function() {
 
   if(width > 767) {
     $('main').css('min-height' , height);
+    
+    $('.smooth-scroll').bind('click', function(e) {
+      e.preventDefault(); 
+
+      var target = $(this).attr("href"); 
+
+      $('html, body').stop().animate({
+          scrollTop: $(target).offset().top
+      }, 1000, function() {
+          location.hash = target;
+      });
+
+      return false;
+    });
 
     parallaxIt(); 
 
@@ -20,8 +34,22 @@ $(document).ready(function() {
       $('main').css('min-height' , height);
 
       parallaxIt(); 
+      
+      $('.smooth-scroll').bind('click', function(e) {
+        e.preventDefault(); 
 
-    })
+        var target = $(this).attr("href"); 
+
+        $('html, body').stop().animate({
+            scrollTop: $(target).offset().top
+        }, 1000, function() {
+            location.hash = target;
+        });
+
+        return false;
+      });
+
+    });
   }
 
   // MENU TOOGLE
@@ -86,6 +114,14 @@ $(document).ready(function() {
   $(window).scroll(function() {
     
     var width = $(window).width();
+    
+    if(width > 767){
+      if ($(this).scrollTop() > 200){  
+        $('.smooth-scroll').addClass("visible");
+      } else{
+        $('.smooth-scroll').removeClass("visible");
+      } 
+    }
     
     if(width > 991) {
       // MENU FIXED CON SCROLL

@@ -247,7 +247,7 @@ function post_type_projects() {
         'rewrite' => true,                             
         'capability_type' => 'post',
         'hierarchical' => true,
-        'menu_position' => null,
+        'menu_position' => 20,
         'menu_icon' => 'dashicons-admin-multisite',
         'supports' => array( 
             'title',
@@ -284,7 +284,7 @@ function post_type_productos() {
         'rewrite' => true,                             
         'capability_type' => 'post',
         'hierarchical' => true,
-        'menu_position' => null,
+        'menu_position' => 20,
         'menu_icon' => 'dashicons-screenoptions',
         'supports' => array( 
             'title',
@@ -321,7 +321,7 @@ function post_type_testimonios() {
         'rewrite' => true,                             
         'capability_type' => 'post',
         'hierarchical' => true,
-        'menu_position' => null,
+        'menu_position' => 20,
         'menu_icon' => 'dashicons-thumbs-up',
         'supports' => array( 
             'title',
@@ -498,3 +498,15 @@ if (!is_admin()) {
   }
   add_filter('pre_get_posts','wpb_search_filter');
 }
+
+//MENU FOOTER
+function register_my_menus() {  
+  register_nav_menus(
+    array(
+    'footer_primary' => __( 'Footer 1' ),
+    'footer_second' => __( 'Footer 2' ),
+    'footer_third' => __( 'Footer 3' )
+    )
+  );
+}
+add_action( 'init', 'register_my_menus' );

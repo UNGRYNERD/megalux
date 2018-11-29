@@ -64,7 +64,12 @@ include( get_template_directory() . '/header.php');?>
                           }?>
                           <span>|</span>
                           <?php printf( _nx( '1 Comentario', '%1$s Comentarios', get_comments_number(), 'comments title', 'textdomain' ), number_format_i18n( get_comments_number() ) ); ?>
+                          
+                          <div class="share-box d-block">
+                            <?php echo wpfai_social(); ?> 
+                          </div>
                         </div>
+
                       </div>
 
                   <?php } if(!is_archive()){?> 

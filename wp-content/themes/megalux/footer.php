@@ -1,3 +1,8 @@
+<a href="#top" class="smooth-scroll">
+  <i class="fas fa-chevron-up"></i>
+</a>
+ 
+
 <?php if(get_field('titulo', 'option') || get_field('shortcode', 'option') || get_field(' texto_pie', 'option')){?>
   <section class="box-content box-newsletter">
     <div class="container">
@@ -15,8 +20,6 @@
     </div>
   </section>
 <?php }?>
- 
-
  
 <footer class="footer">
   <div class="container">
@@ -55,6 +58,23 @@
             <?php }
            }?>
         </div>
+        
+        <div class="col-12 col-md-8">
+          <div class="row justify-content-md-end menu-footer">
+            <div class="col-12 col-md-4 col-lg-3">
+              <?php wp_nav_menu( array( 'theme_location' => 'footer_primary' ) ); ?>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-3">
+              <?php wp_nav_menu( array( 'theme_location' => 'footer_second' ) ); ?>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-3">
+              <?php wp_nav_menu( array( 'theme_location' => 'footer_third' ) ); ?>
+            </div>
+          </div>
+        </div>
+        
       <?php }?>
       
     </div>

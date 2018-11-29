@@ -781,7 +781,7 @@ form.wpcf7-form {
 }
 
 .box-post {
-  .info-post{
+  .info-post {
     margin-bottom: 30px;
     color: $azulsubtitulos;
     
@@ -792,6 +792,16 @@ form.wpcf7-form {
     span{
       margin: 0 5px;
       display: inline-block;
+    }
+    
+    .share-box .wpfai-list li {
+      margin: 0;
+      
+      a {
+        font-size: 12px;
+      
+        span {margin: 0;}
+      }
     }
   }
 }
@@ -820,34 +830,84 @@ form.wpcf7-form {
       }
     }
   }
+  
+  .col-paginacion {
+    .next-link {
+      float: right;
+      margin-bottom: 20px;
+    }
+    
+    &:after{
+      content:"";
+      clear: both;
+      margin-bottom: 20px;
+    }
+    
+  }
 }
 
-.box-tags {
-  position: relative;
-  border: 1px solid #eceef0;
-  padding-left: 70px;
-  height: 50px;
-  line-height: 50px;
-  
-  span {
-    position: absolute;
-    top: 1px;
-    left: 1px;
-    background-color: $azultitulos;
-    font-size: 16px;
-    color: #fff;
-    width: 48px;
-    height: 48px;
-    text-align: center;
-    display: inline-block;
+.share-content {
+  .box-tags {
+    position: relative;
+    border: 1px solid #eceef0;
+    padding-left: 70px;
+    height: 50px;
     line-height: 50px;
+    margin-bottom: 15px;
+    width: 100%;
+
+    .icon-box {
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      background-color: $azultitulos;
+      font-size: 16px;
+      color: #fff;
+      width: 48px;
+      height: 48px;
+      text-align: center;
+      display: inline-block;
+      line-height: 50px;
+    }
+
+    a {
+      color: $azultextotop;
+      font-style: italic;
+    }
   }
   
-  a {
-    color: $azultextotop;
-    font-style: italic;
+  .share-box {
+    @extend .box-tags;
+    
+    .icon-box {
+      background-color: $azulboton;
+    }
+
+  }
+  
+}
+
+.share-box {
+  display: inline-block;
+  
+  .wpfai-list {
+    margin: 0;
+
+    li {
+      margin-right: 5px;
+
+      a {
+        color: $azulsubtitulos;
+        font-size: 18px;
+        
+        span {
+          width: 25px;
+        }
+      }
+    }
   }
 }
+  
 
 // Sidebar blog 
 .sidebar-blog {
