@@ -1,7 +1,6 @@
 <?php
-  $blog_id = get_option('page_for_posts');
+  $blog_page = get_option('page_for_posts');
 ?>
-
 
  <div class="col-12 col-md-3 sidebar-blog">
  
@@ -25,11 +24,11 @@
     }?>
   </div>
   
-  <?php //if (get_field('imagen_catalogo',$blog_id) && get_field('archivo_catalogo',$blog_id)) {?>
-    <a href="<?php echo get_field('archivo_catalogo',$blog_id);?>" target="_blank">
-      <img src="<?php echo get_field('imagen_catalogo',$blog_id)['url'];?>" alt="">
+  <?php if (get_field('imagen_catalogo',$blog_page) && get_field('archivo_catalogo',$blog_page)) {?>
+    <a href="<?php echo get_field('archivo_catalogo',$blog_page);?>" target="_blank">
+      <img src="<?php echo get_field('imagen_catalogo',$blog_page)['url'];?>" alt="<?php echo get_field('imagen_catalogo',$blog_page)['alt'];?>"  title="<?php echo get_field('imagen_catalogo',$blog_page)['title'];?>">
     </a>
-  <?php //}?>
+  <?php }?>
   
   <div class="tags-list">
     <h4>Etiquetas</h4>
