@@ -25,13 +25,13 @@ $post_tags = get_the_tags();
                 <?php } if($next_post){?>
                   <a class="button button--outline button--blue next-link" href="<?php echo get_permalink($next_post->ID); ?>">Siguiente</a>
                 <?php }?>
-            </div>
+              </div>
             
             <div class="content">
               <?php if(post_image_size()){?>
                 <img class="box-img w-100" src="<?php echo post_image_size();?>" alt="">
               <?php }?> 
-              <div class="box-post">
+              <div class="box-post-title">
                 <h1><?php the_title();?></h1>
                 <div class="info-post">
                   <?php if ($terms) {
@@ -44,6 +44,9 @@ $post_tags = get_the_tags();
                   <span>|</span>
                   <?php printf( _nx( '1 Comentario', '%1$s Comentarios', get_comments_number(), 'comments title', 'textdomain' ), number_format_i18n( get_comments_number() ) ); ?>
                   <span>|</span>
+                  <div class="share-box">
+                    Compartir: <?php echo wpfai_social(); ?>
+                  </div>
                 </div>
               </div>
               <div class="post-content">
@@ -54,7 +57,7 @@ $post_tags = get_the_tags();
 
                 <?php if ( $post_tags ) {?>
                   <div class="box-tags">
-                    <span>
+                    <span class="icon-box">
                       <i class="fas fa-tag"></i>
                     </span>
                     <?php foreach( $post_tags as $tag ) {?>
@@ -64,7 +67,46 @@ $post_tags = get_the_tags();
                     <?php }?>
                   </div>
                 <?php }?>
+                
+                <div class="share-box">
+                  <span class="icon-box">
+                    <i class="fas fa-share-alt"></i>
+                  </span>
+                  <?php echo wpfai_social(); ?> 
+                </div>
 
+              </div>
+              
+              
+              <?php
+                  $args= array( 
+                    'posts_per_page' => 3,
+                    'post__not_in' => array($post->ID), 
+                    'orderby' => 'rand', 
+                  );
+                  $my_query = new WP_Query( $args );
+
+                  if( $my_query->have_posts() ) {?>
+
+                    <div class="row related-post">
+                      <div class="col-12">
+                        <h3>Noticias relacionadas</h3>
+                      </div>
+
+                      <?php while ($my_query->have_posts()) { $my_query->the_post(); ?>
+                        <div class="col-12 col-md-4 box-post">
+                          <a href="<?php echo get_permalink(); ?>" class="col-project">
+                             <?php echo print_thumbnail($post->ID);?>
+                            <p><?php the_title(); ?></p>
+                          </a>
+                        </div>
+
+                      <?php }?>
+                      </div>
+                <?php } wp_reset_query();?>
+              
+              <div class="comments-box">
+                <?php comments_template(); ?>
               </div>
               
             </div>

@@ -115,6 +115,7 @@
   position: relative;
   display: block;
   margin-bottom: 30px;
+  min-height: 120px;
   
   &:hover{
     p {
@@ -780,7 +781,7 @@ form.wpcf7-form {
   }
 }
 
-.box-post {
+.box-post-title {
   .info-post {
     margin-bottom: 30px;
     color: $azulsubtitulos;
@@ -800,7 +801,10 @@ form.wpcf7-form {
       a {
         font-size: 12px;
       
-        span {margin: 0;}
+        span {
+          margin: 0;
+          vertical-align: top;
+        }
       }
     }
   }
@@ -820,7 +824,7 @@ form.wpcf7-form {
       margin-bottom: 40px;
     }
     
-    .box-post {
+    .box-post-title {
       margin-bottom: 25px;
       border-bottom: 1px solid #dcdcdc;
 
@@ -841,12 +845,22 @@ form.wpcf7-form {
       content:"";
       clear: both;
       margin-bottom: 20px;
-    }
-    
+    } 
   }
+  
+  .related-post {
+    margin-bottom: 50px;
+    
+    h3 {
+      margin-bottom: 30px;
+    }
+  }
+  
 }
 
 .share-content {
+  margin-bottom: 50px;
+  
   .box-tags {
     position: relative;
     border: 1px solid #eceef0;
@@ -892,6 +906,7 @@ form.wpcf7-form {
   
   .wpfai-list {
     margin: 0;
+    display: inline-block;
 
     li {
       margin-right: 5px;
@@ -907,7 +922,6 @@ form.wpcf7-form {
     }
   }
 }
-  
 
 // Sidebar blog 
 .sidebar-blog {
@@ -989,4 +1003,51 @@ form.wpcf7-form {
       }
     }
   }
+}
+
+//Comentarios
+.comments-box {
+  
+  h3 {
+    margin-bottom: 50px;
+  }
+
+  .comment {
+    border: 1px solid #eceef0;
+    background: #ffffff;
+    color: $azulsubtitulos;
+    padding: 30px;
+    box-shadow: 0 0px 0px #ffffff, 0 4px 0 -1px #ffffff, 0 0px 0px 0px #ffffff,0 0px 0px #ffffff, 0 4px 0 0px #ecf0f1, 0px 0px 0px 0px #ffffff;
+    margin-bottom: 40px;
+    
+    .image-author{
+      min-width: 76px;
+      margin-right: 30px;
+    }
+    
+    .comment-details {
+      h4 {
+        font-weight: bold;
+        font-family: $tipo-bold;
+        display: inline-block;
+        margin: 0 15px 15px 0;
+      }
+      
+      .reply {
+        a {
+          background-color: $azulsubtitulos;
+          color: #fff;
+          border-radius: 3px;
+          margin-left: 5px;
+          padding: 2px 10px 3px;
+          text-transform: uppercase;
+          
+          &:hover {
+            background-color: $azultitulos;            
+          }
+        }
+      }
+    }
+  }
+
 }
