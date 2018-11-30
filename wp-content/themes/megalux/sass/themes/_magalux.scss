@@ -953,7 +953,6 @@ form.wpcf7-form {
     position: relative;
     border: 1px solid #eceef0;
     padding-left: 70px;
-    height: 50px;
     line-height: 50px;
     margin-bottom: 15px;
     width: 100%;
@@ -1091,6 +1090,10 @@ form.wpcf7-form {
       }
     }
   }
+  
+  @media (max-width: 767px){
+    margin-top: 80px;
+  }
 }
 
 //Comentarios
@@ -1111,6 +1114,7 @@ form.wpcf7-form {
     .image-author{
       min-width: 76px;
       margin-right: 30px;
+      margin-bottom: 25px;
     }
     
     .comment-details {

@@ -59,7 +59,7 @@ if (comments_open()) { ?>
 function template_list_comments( $comment, $args, $depth ) {
 
     $GLOBALS['comment'] = $comment; ?>
-    <div id="comment-<?php comment_ID(); ?>" class="comment d-flex">
+    <div id="comment-<?php comment_ID(); ?>" class="comment d-md-flex">
 
       <div class="image-author">
         <?php 
@@ -72,10 +72,10 @@ function template_list_comments( $comment, $args, $depth ) {
       <?php endif; ?>
 
       <div class="comment-details">
-        <div class="title d-flex justify-content-between">
+        <div class="title d-md-flex justify-content-between">
           <h4><?php comment_author();?></h4>
 
-          <div class="reply text-right">
+          <div class="reply text-md-right">
             <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
             <?php edit_comment_link(__('Edit'),'  ','') ?>
           </div>

@@ -2,7 +2,7 @@
   $blog_page = get_option('page_for_posts');
 ?>
 
- <div class="col-12 col-md-3 sidebar-blog">
+ <div class="col-12 col-md-4 col-lg-3 sidebar-blog">
  
   <form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
     <label>

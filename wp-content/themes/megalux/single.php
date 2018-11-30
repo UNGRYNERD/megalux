@@ -94,7 +94,7 @@ $post_tags = get_the_tags();
                       </div>
 
                       <?php while ($my_query->have_posts()) { $my_query->the_post(); ?>
-                        <div class="col-12 col-md-4 box-post">
+                        <div class="col-12 col-md-6 col-lg-4 box-post">
                           <a href="<?php echo get_permalink(); ?>" class="col-project">
                              <?php echo print_thumbnail($post->ID);?>
                             <p><?php the_title(); ?></p>
