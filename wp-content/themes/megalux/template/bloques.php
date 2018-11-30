@@ -21,6 +21,11 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
       </div>
     </section>
   <?php } 
+  
+    if(is_front_page() && get_field('shortcode_slider')){
+      echo do_shortcode(get_field('shortcode_slider'));
+    }
+      
     $bloque = get_field('bloques');
     if ($bloque){
       foreach($bloque as $item){
@@ -70,7 +75,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
         //imagen parallax
         if($item[acf_fc_layout] == 'imagen_parallax') {?>
         
-          <section class="box-content parallax" style="background-image:url('<?php echo $item['imagen_parallax']['url'];?>'); height: 400px" data-type="background-image" data-speed="2">
+          <section class="box-content parallax" style="background-image:url('<?php echo $item['imagen_parallax']['url'];?>'); height: 400px" data-type="background-image" data-speed="3">
            <?php if($item[texto]){?>
               <div class="container">
                 <div class="row">
