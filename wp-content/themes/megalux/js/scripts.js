@@ -56,6 +56,8 @@ $(document).ready(function() {
 
   $('.navbar-toggler').click(function(){
     $(this).toggleClass('open');
+    $('#navbarResponsive').toggleClass('open');
+
     $('body').toggleClass('no-scroll');
     console.log('click');
   });

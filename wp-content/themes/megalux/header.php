@@ -141,7 +141,7 @@
             </nav>  
 
               <div class="col-auto align-self-center d-flex justify-content-end d-lg-none">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button">
                   <span></span>
                   <span></span>
                   <span></span>
