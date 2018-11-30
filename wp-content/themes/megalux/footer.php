@@ -41,7 +41,31 @@
             }?>
            </div>
            
-           <?php if (get_field('direccion', 'option')){?>
+           <?php if( get_field('facebook', 'option') || get_field('youtube', 'option') || get_field('twitter', 'option') || get_field('linkedin', 'option')){?> 
+               
+            <div class="social-box">
+              <?php if(get_field('facebook', 'option')){?>
+                <a href="<?php echo get_field('facebook', 'option');?>" target="_blank">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              <?php } if(get_field('youtube', 'option')){?>
+                <a href="<?php echo get_field('youtube', 'option');?>" target="_blank">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              <?php } if(get_field('twitter', 'option')){?>
+                <a href="<?php echo get_field('twitter', 'option');?>" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              <?php } if(get_field('linkedin', 'option')){?>
+                <a href="<?php echo get_field('linkedin', 'option');?>" target="_blank">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              <?php }?>
+            </div>
+
+          <?php }
+           
+           if (get_field('direccion', 'option')){?>
             <div class="content">
               <?php the_field('direccion', 'option');?>
             </div>
