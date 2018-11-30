@@ -286,7 +286,6 @@
 
 //HOME
 .home {
-  
   .box-proyectos {
     background-color: $azulclaro;
     
@@ -324,6 +323,46 @@
       margin-bottom: 24px;
     }
   }
+}
+
+.social-fixed {
+  width: 45px;
+  position: fixed;
+  right: 0;
+  top: 40%;
+  
+  .social--icon {
+    color: #fff;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    float: right;
+    
+    i {
+      vertical-align: middle;
+    }
+    
+    &--fb {
+      background-color: #3b5999;
+    }
+    
+    &--youtube {
+      background-color: #c4302b;
+    }
+    
+    &--twitter {
+      background-color: #55acee;
+    }
+    
+    &--linkedin {
+      background-color: #0077b5;
+    }
+    
+    &:hover {
+      width: 100%;
+    }
+  }
+  
 }
 
 //CONTACTO

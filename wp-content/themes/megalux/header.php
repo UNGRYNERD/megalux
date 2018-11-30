@@ -32,7 +32,7 @@
             </div>
             <?php }?>
             <div class="col-6 text-right">
-              <?php if( get_field('facebook', 'option') || get_field('youtube', 'option') || get_field('twitter', 'option') || get_field('google_plus', 'option') || get_field('linkedin', 'option')){?> 
+              <?php if( get_field('facebook', 'option') || get_field('youtube', 'option') || get_field('twitter', 'option') || get_field('linkedin', 'option')){?> 
                
                 <div class="social-box">
                   <?php if(get_field('facebook', 'option')){?>
@@ -46,10 +46,6 @@
                   <?php } if(get_field('twitter', 'option')){?>
                     <a href="<?php echo get_field('twitter', 'option');?>" target="_blank">
                       <i class="fab fa-twitter"></i>
-                    </a>
-                  <?php } if(get_field('google_plus', 'option')){?>
-                    <a href="<?php echo get_field('google_plus', 'option');?>" target="_blank">
-                      <i class="fab fa-google-plus-g"></i>
                     </a>
                   <?php } if(get_field('linkedin', 'option')){?>
                     <a href="<?php echo get_field('linkedin', 'option');?>" target="_blank">

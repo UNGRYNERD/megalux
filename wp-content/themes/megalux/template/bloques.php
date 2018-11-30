@@ -303,6 +303,33 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
         
       //endforeach
       }
+    } 
+  
+    //redes sociales fixed en home
+    if(is_front_page()){
+      if( get_field('facebook', 'option') || get_field('youtube', 'option') || get_field('twitter', 'option') || get_field('linkedin', 'option')){?> 
+
+        <div class="social-box social-fixed">
+          <?php if(get_field('facebook', 'option')){?>
+            <a class="social--icon social--icon--fb" href="<?php echo get_field('facebook', 'option');?>" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          <?php } if(get_field('youtube', 'option')){?>
+            <a class="social--icon social--icon--youtube" href="<?php echo get_field('youtube', 'option');?>" target="_blank">
+              <i class="fab fa-youtube"></i>
+            </a>
+          <?php } if(get_field('twitter', 'option')){?>
+            <a class="social--icon social--icon--twitter" href="<?php echo get_field('twitter', 'option');?>" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          <?php } if(get_field('linkedin', 'option')){?>
+            <a class="social--icon social--icon--linkedin" href="<?php echo get_field('linkedin', 'option');?>" target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          <?php }?>
+        </div>
+
+      <?php } 
     }?>
   
 </main>
