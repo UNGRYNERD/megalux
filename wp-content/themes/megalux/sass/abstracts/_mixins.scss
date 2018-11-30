@@ -154,21 +154,16 @@
 	transform-origin: $origin;
 }
 
-@mixin placeholder-color($color) {
-  &::-webkit-input-placeholder { /* WebKit browsers */
-      color: $color;
-  }
-  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-      color: $color;
-  }
-  &::-moz-placeholder { /* Mozilla Firefox 19+ */
-      color: $color;
-  }
-  &:-ms-input-placeholder { /* Internet Explorer 10+ */
-      color: $color;
-  }
+@mixin placeholder($selector, $color) {
+  #{$selector}::-webkit-input-placeholder {color: $color}
+  #{$selector}::-moz-placeholder          {color: $color}
+  #{$selector}:-ms-input-placeholder      {color: $color}
 }
-//@include placeholder {color: red}
+/*@include placeholder {
+    font-style:italic;
+    color: white;
+    font-weight:100;
+}*/
 
 
 // Filter

@@ -13,14 +13,14 @@ if (have_posts()) : while (have_posts()) : the_post();?>
       
       <div class="col-12 col-paginacion">
          <div class="row justify-content-between">
-          <div class="col-4">
+          <div class="col-auto">
             <a class="all-projects" href="<?php echo get_permalink($proyecto);?>">
               <span></span>
               <span></span>
             </a>
           </div>
 
-          <div class="col-4 text-right">
+          <div class="col-auto text-right">
             <?php                
               $prev_post = get_next_post();
               $next_post = get_previous_post();
@@ -87,7 +87,7 @@ if (have_posts()) : while (have_posts()) : the_post();?>
         <?php 
 
           $args = array(
-            'post_type' => 'proyectos',
+            'post_type' => 'proyecto',
             'posts_per_page' => 8
           );
           query_posts($args);
@@ -97,7 +97,7 @@ if (have_posts()) : while (have_posts()) : the_post();?>
             while (have_posts()) {
               the_post(); ?>
 
-                  <div class="col-12 col-md-3 ">
+                  <div class="col-12 col-md-6 col-lg-3 ">
                     <a href="<?php echo get_permalink(); ?>" class="col-project">
                       <?php if(get_field('galeria', $proyecto['proyecto_destacado']->ID )[0]){ ?>
                         <img src="<?php echo get_field('galeria')[0][url];?>" alt="<?php echo get_field('galeria')[0][alt];?>" title="<?php echo get_field('galeria')[0][title];?>">
@@ -115,7 +115,7 @@ if (have_posts()) : while (have_posts()) : the_post();?>
   </section>
 
   
-  include( get_template_directory() . '/template/content-relacionado.php'); ?>
+  <?php include( get_template_directory() . '/template/content-relacionado.php'); ?>
 
 </main>
 

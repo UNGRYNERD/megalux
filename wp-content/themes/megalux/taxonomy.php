@@ -24,7 +24,7 @@ include('header.php');?>
   <section class="box-content">
     <div class="container">
       <div class="row">
-        <div class="col-3">
+        <div class="col-12 col-md-3 order-2 order-md-0">
 
           <div id="accordion" class="sidebar-taxonomy">
 
@@ -116,7 +116,7 @@ include('header.php');?>
             <?php if (have_posts()) {
               while (have_posts()) { the_post();?>
                 <?php echo term_description(); echo $description;?>
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-6 col-lg-4">
                   <a href="<?php echo get_permalink(); ?>" class="col-project col-archive">
                      <?php echo print_thumbnail($post->ID);?>
                     <p><?php the_title(); ?></p>

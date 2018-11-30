@@ -23,10 +23,10 @@
  
 <footer class="footer">
   <div class="container">
-    <div class="row">
+    <div class="row justify-content-md-center justify-content-lg-between">
      
       <?php if(get_field('logo_footer_izquierda', 'option') || get_field('logo_footer_derecha', 'option') || get_field('direccion', 'option') || get_field('telefono_de_contacto', 'option') || get_field(' email_de_contacto', 'option')){?>
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-6 col-lg-4 info-footer">
           <div class="footer-logo">
             <?php if(get_field('logo_footer_izquierda', 'option') || get_field('logo_footer_derecha', 'option')){
               if(get_field('logo_footer_izquierda', 'option')){?>
@@ -83,7 +83,7 @@
            }?>
         </div>
         
-        <div class="col-12 col-md-8">
+        <div class="col-12 col-md-12 col-lg-8">
           <div class="row justify-content-md-end menu-footer">
             <div class="col-12 col-md-4 col-lg-3">
               <?php wp_nav_menu( array( 'theme_location' => 'footer_primary' ) ); ?>

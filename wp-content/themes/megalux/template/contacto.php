@@ -136,9 +136,11 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
     <?php } $direccion = get_field('mapa');
 
       if($direccion){
-
+          
         $lat = $direccion['lat'];
         $lng = $direccion['lng'];
+        $direccion = $direccion['address'];
+        
       ?>
       <section class="box-map">
         <div id="map"></div>
@@ -174,11 +176,16 @@ include( get_template_directory() . '/footer.php'); ?>
       var mapElement = document.getElementById('map');
       var map = new google.maps.Map(mapElement, mapOptions);
 
+      var infowindow = new google.maps.InfoWindow();
+    
       var marker = new google.maps.Marker({
           position: new google.maps.LatLng(<?php echo $lat?>, <?php echo $lng?>),
 
           map: map,
           title: '<?php wp_title(''); ?>'
       });
+    
+      infowindow.setContent( "<span><?php echo $direccion;?></span>" );
+      infowindow.open(map, marker);
   }
 </script>

@@ -78,7 +78,7 @@
         <div class="container">
           <div class="row justify-content-between">
 
-               <nav class="col-5 navbar navbar-custom align-items-start flex-column <?php echo $open;?>" role="navigation">
+               <nav class="col-5 navbar navbar-custom align-items-start flex-column d-none d-lg-block" role="navigation">
                    <?php
 
                     wp_nav_menu( array(
@@ -86,7 +86,7 @@
                       'depth'             => 2,
                       'container'         => 'div',
                       'container_id'      => 'menu',
-                      'menu_class'        => 'navbar navbar-expand-md justify-content-md-between',
+                      'menu_class'        => 'navbar navbar-expand-md justify-content-md-start justify-content-lg-between',
                       'walker'            => new WP_Bootstrap_Navwalker(),
                     ) );
                     ?>
@@ -113,7 +113,7 @@
                 </div> 
               <?php }?>
               
-             <nav class="col-4 navbar navbar-custom align-items-end flex-column <?php echo $open;?>" role="navigation">
+             <nav class="col-4 navbar navbar-custom align-items-end flex-column d-none d-lg-block" role="navigation">
                  <?php
 
                   wp_nav_menu( array(
@@ -125,9 +125,22 @@
                     'walker'            => new WP_Bootstrap_Navwalker(),
                   ) );
                   ?>
-            </nav> 
+            </nav>
+              
+            <nav id="navbarResponsive" class="navbar navbar-custom align-items-end flex-column d-lg-none" role="navigation">
+               <?php
+                wp_nav_menu( array(
+                  'theme_location'    => 'menu_movil',
+                  'depth'             => 2,
+                  'container'         => '',
+                  'container_id'      => '',
+                  'menu_class'        => 'navbar',
+                  'walker'            => new WP_Bootstrap_Navwalker(),
+                ) );
+                ?>
+            </nav>  
 
-              <div class="col-5 align-self-center d-flex justify-content-end d-lg-none">
+              <div class="col-auto align-self-center d-flex justify-content-end d-lg-none">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                   <span></span>
                   <span></span>

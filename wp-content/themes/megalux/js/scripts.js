@@ -54,9 +54,10 @@ $(document).ready(function() {
 
   // MENU TOOGLE
 
-  $('.menu-toggle').click(function(){
-  $(this).toggleClass('open');
-      $('body').toggleClass('no-scroll');
+  $('.navbar-toggler').click(function(){
+    $(this).toggleClass('open');
+    $('body').toggleClass('no-scroll');
+    console.log('click');
   });
 
   if (width < 768) {

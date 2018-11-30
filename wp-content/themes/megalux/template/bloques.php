@@ -56,10 +56,10 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
         
           <section class="box-content box-icons">
             <div class="container">
-              <div class="row justify-content-between">
+              <div class="row justify-md-content-between justify-content-center">
                 <?php if($item[tira]){
                   foreach ($item[tira] as $icons){?>
-                    <div class="col-12 col-sm-6 col-md-2 text-center">
+                    <div class="col-6 col-md-2 text-center">
                       <img src="<?php echo $icons['icono']['url'];?>" alt="<?php echo $icons['icono']['alt'];?>" title="<?php echo $icons['icono']['title'];?>">
                       <p><?php echo $icons['texto'];?></p>
                     </div>
@@ -113,7 +113,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <?php } if($item[galeria]){
                   foreach($item[galeria] as $galeria){?>
                    
-                    <div class="col-6 col-sm-4 col-md-2">
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
                       <img src="<?php echo $galeria[url];?>" alt="<?php echo $galeria[alt];?>" title="<?php echo $galeria[title];?>">
                     </div>
                     
@@ -196,7 +196,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                   foreach ($item[proyectos] as $proyecto){
                   //echo '<pre>';print_r($proyecto);echo '</pre>'; ?>
                   
-                  <div class="col-12 col-md-4">
+                  <div class="col-12 col-md-6 col-lg-4">
                     <a href="<?php echo get_permalink($proyecto['proyecto_destacado']); ?>" class="col-project">
                      <?php if(get_field('galeria', $proyecto['proyecto_destacado']->ID )[0]){ ?>
                        <img src="<?php echo get_field('galeria', $proyecto['proyecto_destacado']->ID )[0][url];?>" alt="<?php echo get_field('galeria', $proyecto['proyecto_destacado']->ID )[0][alt];?>" title="<?php echo get_field('galeria', $proyecto['proyecto_destacado']->ID )[0][title];?>">

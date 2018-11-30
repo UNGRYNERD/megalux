@@ -31,22 +31,30 @@
   
   form.wpcf7-form {
   
-    input {
+    input{
       background: transparent;
       border: 2px solid #fff;
       color: #fff;
       height: 45px;
       width: 100%;
       margin-bottom: 0;
+      
+      @media (max-width: 991px){
+        margin-bottom: 20px;;
+      }
     }
+    
+    @include placeholder('input', #fff);    
 
-     input[type="submit"] {
+    input[type="submit"] {
       background-color: #fff;
       color: $azultexto !important;
       border: 2px solid #fff !important;
       width: 100%;
       font-size: 14px;
       text-transform: capitalize;
+      max-width: 180px;
+      margin: 0 auto;
 
       &:hover {
         background-color: rgba(255,255,255,0.6) !important;
@@ -73,15 +81,24 @@
   background: linear-gradient(to right, rgba(57,86,145,1) 0%, rgba(20,54,118,1) 100%);
   color: $azulboton;
   
-  a {
-    color: $azulboton;
-  }
-  
-  .footer-logo{
-    img {
-      margin: 0 20px 30px 0;
+  .info-footer{
+    a {
+      color: $azulboton;
+    }
+
+    .footer-logo{
+      img {
+        margin: 0 20px 30px 0;
+      }
+    }
+    
+    @media (max-width: 991px){
+      margin-bottom: 40px;
+      text-align: center;
     }
   }
+  
+
   
   .menu-footer{
     ul {
@@ -130,5 +147,9 @@
         margin: 0 3px 5px;
       }
     }
+  }
+  
+  @media (max-width: 991px){
+    text-align: center;
   }
 }

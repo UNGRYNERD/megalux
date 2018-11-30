@@ -1,3 +1,17 @@
+body {
+  @include transition(0.6s ease all);
+  
+  &.no-scroll {
+    @include transform(translateX(-269px));
+  }
+}
+
+.page-default {
+  .box-header {
+    background-image: url('../img/header-background-default.jpg');
+  }
+}
+
 //BOX CABECERA CON TITULO
 .box-header {
   height: 280px;
@@ -31,6 +45,10 @@
 
 .box-content {
   padding: 70px 0;
+  
+  @media (max-width: 767px){
+    padding: 40px 0;
+  }
 }
 
 //BOX TIRA DE ICONOS
@@ -41,6 +59,9 @@
   p {
     color: $azultexto;
     margin: 0;
+    @media (max-width: 767px){
+      margin-bottom: 20px
+    }
   }
 }
 
@@ -177,6 +198,10 @@
 
 .row-buttons {
   padding: 80px 0;
+  
+  @media (max-width: 991px){
+    padding: 40px 0;
+  }
 }
 
 .button {
@@ -235,6 +260,10 @@
   
   &:focus, &:active, &:focus:active {
     outline: none;
+  }
+  
+  @media (max-width: 767px){
+    margin-bottom: 20px;
   }
 }
 
@@ -442,6 +471,10 @@ form.wpcf7-form {
     padding: 10px 20px 11px 20px;
     resize: none;
     margin-bottom: 20px;
+    
+    &:focus, &:active, &:active:focus {
+      outline: none;
+    }
   }
   
   .button-box {
@@ -530,6 +563,10 @@ form.wpcf7-form {
   
   &--productos {
     
+    .box-header {
+      background-image: url('../img/background-product.jpg')
+    }
+    
     &.page-product{
       background-color: #fff;
     }
@@ -564,6 +601,7 @@ form.wpcf7-form {
 // Slider con miniaturas
 .thumbslider{
   width:100%;
+  margin-bottom: 40px;
   
   .lSSlideOuter {
     ul {
@@ -631,6 +669,10 @@ form.wpcf7-form {
   width: 100%;
   height: 1px;
   display: block;
+  
+  @media (max-width: 767px){
+    margin-top: 0;
+  }
 }
 
 .col-paginacion {
@@ -680,6 +722,8 @@ form.wpcf7-form {
     }
     
     &.next-link{
+      margin-left: 5px;
+      
       &:after{
         margin-left: 10px;
         @include transform(rotate(-45deg));
@@ -691,6 +735,10 @@ form.wpcf7-form {
         margin-right: 10px;
         @include transform(rotate(135deg));
       }
+    }
+    @media (max-width: 767px){
+      padding: 7px 7px;
+      font-size: 12px
     }
   }
 }
