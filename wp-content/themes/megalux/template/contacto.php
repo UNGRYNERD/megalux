@@ -23,15 +23,19 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
     
     <?php }
   
-    if(get_field('formulario') || get_field('titulo_direcciones') || get_field('direcciones') || get_field('titulo_email') || get_field('direcciones_de_correo') || get_field('titulo_telefono') || get_field('numeros_de_telefono') || get_field('titulo_banner') || get_field('texto_boton') || get_field('url_boton') || get_field('imagen_banner') ){?>
+    if(get_field('texto_izquierda') || get_field('formulario') || get_field('titulo_direcciones') || get_field('direcciones') || get_field('titulo_email') || get_field('direcciones_de_correo') || get_field('titulo_telefono') || get_field('numeros_de_telefono') || get_field('titulo_banner') || get_field('texto_boton') || get_field('url_boton') || get_field('imagen_banner') ){?>
     
     <section class="box-content box-contact">
       <div class="container">
         <div class="row">
           
-          <?php if(get_field('formulario')){?>
+          <?php if(get_field('texto_izquierda') || get_field('formulario')){?>
             <div class="col-12 col-md-6">
-              <?php echo do_shortcode(get_field('formulario'));?>
+              <?php if(get_field('texto_izquierda')) {
+                echo get_field('texto_izquierda');
+              } if(get_field('formulario')){
+                echo do_shortcode(get_field('formulario'));
+              }?>
             </div>
           <?php } 
           

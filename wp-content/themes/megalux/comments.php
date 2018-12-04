@@ -13,28 +13,24 @@ if (comments_open()) {
       <div class="row">
         <div class="col-12 col-md-4">
           <div class="form-group">
-            <label for="name"></label>
             <input type="text" class="form-control required" name="author" placeholder="Nombre *">
           </div>
         </div>
 
         <div class="col-12 col-md-4">
           <div class="form-group">
-            <label for="email"></label>
             <input type="text" class="form-control required email" name="email" placeholder="Email *">
           </div>
         </div>
 
         <div class="col-12 col-md-4">
           <div class="form-group">
-            <label for="url"></label>
             <input type="url" class="form-control" name="url" placeholder="Website">
           </div>
         </div>
 
         <div class="col-12">
-          <div class="form-group">
-            <label for="comment"></label>                                                
+          <div class="form-group">                                              
             <textarea name="comment" cols="30" rows="6" placeholder="Mensaje *" class="form-control required"></textarea>
           </div>
           <div>

@@ -77,9 +77,9 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
         
           <section class="box-content parallax" style="background-image:url('<?php echo $item['imagen_parallax']['url'];?>'); height: 400px" data-type="background-image" data-speed="3">
            <?php if($item[texto]){?>
-              <div class="container">
-                <div class="row">
-                 <div class="col-12">
+              <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                 <div class="col-12 d-flex">
                    <h2><?php echo $item[texto]?></h2>
                  </div>
                 </div>
@@ -132,7 +132,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
             <div class="container">
               <div class="row">
                 <?php foreach($item[testimonios] as $test){ ?>
-                  <div class="col-12 col-sm-6 col-md-4">
+                  <div class="col-12 col-sm-6 col-md-4 d-flex">
                     <div class="col-test">
                       <?php if(print_thumbnail($test['elegir_testimonios']->ID)){ 
                         echo print_thumbnail($test['elegir_testimonios']->ID);
@@ -145,8 +145,10 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                       </div>
                     </div>
                   </div>
-                <?php }
-                if($item[texto]){?>
+                <?php }?>
+              </div>
+              <div class="row">
+                <?php if($item[texto]){?>
                   <div class="content">
                     <?php echo $item[texto];?>
                   </div>
