@@ -9,8 +9,9 @@ include('header.php'); ?>
           <div class="col-sm-8">
             <div class="content">
               <h1>404</h1>
-              <p>La página que intentas solicitar no se encuentra disponible en estos momentos. Por favor,  revise si es correcta la dirección a la que ha accedido.</p>
-              <a href="javascript:window.history.back();" class="button button--outline button--blue">Volver</a>
+              <p>
+              <?php echo __('La página que intentas solicitar no se encuentra disponible en estos momentos. Por favor,  revise si es correcta la dirección a la que ha accedido.','megalux');?></p>
+              <a href="javascript:window.history.back();" class="button button--outline button--blue"><?php echo __('Volver','megalux');?></a>
             </div>
           </div>
         </div>

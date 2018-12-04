@@ -81,7 +81,7 @@ if (have_posts()) : while (have_posts()) : the_post();?>
       <div class="row">
 
         <div class="col-12">
-          <h2 class="text-center">Ver más</h2>
+          <h2 class="text-center"><?php echo __('Ver más','megalux');?></h2>
         </div>
 
         <?php 

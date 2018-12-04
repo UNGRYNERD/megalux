@@ -13,7 +13,7 @@
   </form>
   
   <div class="category-list">
-    <h4>Categorías</h4>
+    <h4><?php echo __('Categorías','megalux');?></h4>
     <?php $cat = get_categories();
     foreach($cat as $item){ 
       if($item->term_id != '1' ) {?>
@@ -31,7 +31,7 @@
   <?php }?>
   
   <div class="tags-list">
-    <h4>Etiquetas</h4>
+    <h4><?php echo __('Etiquetas','megalux');?></h4>
     <?php 
     $terms = get_terms( array(
         'taxonomy' => 'post_tag',

@@ -1,15 +1,13 @@
 <?php 
 
-if (comments_open()) { ?>
-
-    
-    
-    <?php if (have_comments()) {?>
+if (comments_open()) {
+   
+    if (have_comments()) {?>
      <h3><?php printf( _nx( '1 Comentario', '%1$s Comentarios', get_comments_number(), 'comments title', 'textdomain' ), number_format_i18n( get_comments_number() ) ); ?></h3>
       <?php wp_list_comments(array('callback' => 'template_list_comments'));
     } ?>
 
-    <h3>Deja tu comentario</h3>
+    <h3><?php echo __('Deja tu comentario','megalux');?></h3>
     <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="POST" role="form" id="respond">
      
       <div class="row">
@@ -52,7 +50,7 @@ if (comments_open()) { ?>
     
 <?php } else { ?>
 
-    <p>Los comentarios están deshabilitados</p>
+    <p><?php echo __('Los comentarios están deshabilitados','megalux');?></p>
 
 <?php }
 
@@ -89,6 +87,5 @@ function template_list_comments( $comment, $args, $depth ) {
     </div>
 
 <?php }
-
 
 ?>

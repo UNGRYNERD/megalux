@@ -193,8 +193,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                   </div>
                   
                 <?php } if ($item[proyectos]){ 
-                  foreach ($item[proyectos] as $proyecto){
-                  //echo '<pre>';print_r($proyecto);echo '</pre>'; ?>
+                  foreach ($item[proyectos] as $proyecto){?>
                   
                   <div class="col-12 col-md-6 col-lg-4">
                     <a href="<?php echo get_permalink($proyecto['proyecto_destacado']); ?>" class="col-project">

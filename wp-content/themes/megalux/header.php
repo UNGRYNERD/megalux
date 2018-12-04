@@ -65,11 +65,6 @@
               <?php }?>
               
             </div>
-             
-
-
-              
-            
           </div>
         </div>
       </div>
@@ -86,7 +81,7 @@
                       'depth'             => 2,
                       'container'         => 'div',
                       'container_id'      => 'menu',
-                      'menu_class'        => 'navbar navbar-expand-md justify-content-md-start justify-content-lg-between',
+                      'menu_class'        => 'navbar navbar-expand-md justify-content-start',
                       'walker'            => new WP_Bootstrap_Navwalker(),
                     ) );
                     ?>

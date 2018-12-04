@@ -28,7 +28,7 @@ include('header.php');?>
 
           <div id="accordion" class="sidebar-taxonomy">
 
-            <h4>Productos</h4>
+            <h4><?php echo __('Productos','megalux');?></h4>
             <?php
 
               $tax = get_terms(
@@ -126,7 +126,7 @@ include('header.php');?>
             } else {?>
               <div class="col-12">
                 <h3 class="text-center">
-                  No hay productos en esta categoría.
+                  <?php echo __('No hay productos en esta categoría','megalux');?>
                 </h3>
               </div>
             <?php }
@@ -138,9 +138,6 @@ include('header.php');?>
                 </div>
               </div>
             <?php }?>
-            
-            
-            
 
           </div>
         </div>

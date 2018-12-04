@@ -79,7 +79,7 @@ include( get_template_directory() . '/header.php');?>
                 <?php } 
                 } else {?>
                 <div class="col-12">
-                  <h3>No hay resultados</h3>
+                  <h3><?php echo __('No hay resultados','megalux');?></h3>
                 </div>
                 <?php } wp_reset_query();?>
             </div> 
