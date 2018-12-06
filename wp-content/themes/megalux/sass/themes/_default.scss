@@ -101,6 +101,20 @@ img {
   }
 }
 
+//@media (min-width: 991px){
+//  .menu-item-has-children{
+//    .dropdown-menu {
+//      @include transition(0.4s ease all);
+//      opacity: 0;
+//      display: block;
+//    }
+//    
+//    &:hover>.dropdown-menu {
+//      opacity: 1;
+//    }
+//  }
+//}
+
 .navbar-toggler {
   width: 26px;
   height: 19px;

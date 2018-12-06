@@ -196,6 +196,16 @@ header {
             float: none;
             background: #fff;
             padding: 0;
+            max-height: 0;
+            display: block;
+            overflow: hidden;
+            @include transition(0.6s ease all);
+            border: 0;
+            
+            &.show {
+              max-height: 500px;
+              border-top: 3px solid #b8d1f5;
+            }
             
             .dropdown-item {
               color: $azultitulos;
@@ -247,7 +257,7 @@ header {
     border-top: 3px solid $azultop;
     margin-top: -0.5px;
     border-radius: 0;
-    background-color: rgba(5, 10, 36, 0.2);
+    background-color: rgba(5, 10, 36, 0.6);
     
     .dropdown-item {
       color: #fff;
