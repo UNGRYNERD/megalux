@@ -594,7 +594,7 @@ function custom_breadcrumbs() {
                 )
               );
 
-              echo '<li class="item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . get_term_link($tax[0]->term_id) . '" title="' . $post_type_object->labels->name . '">' . $tax[0]->name . '</a></li>';
+              echo '<li class="item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . get_term_link($tax[0]->term_id) . '" title="' . $tax[0]->name . '">' . $tax[0]->name . '</a></li>';
               echo '<li class="separator"> ' . $separator . ' </li>';
               
               $tax_child = get_terms(
@@ -606,7 +606,7 @@ function custom_breadcrumbs() {
               );
               
               if($tax_child){
-                echo '<li class="item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . get_term_link($tax_child[0]->term_id) . '" title="' . $post_type_object->labels->name . '">' . $tax_child[0]->name . '</a></li>';
+                echo '<li class="item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . get_term_link($tax_child[0]->term_id) . '" title="' . $tax_child[0]->name . '">' . $tax_child[0]->name . '</a></li>';
                 echo '<li class="separator"> ' . $separator . ' </li>';
               }
             }   
@@ -619,7 +619,7 @@ function custom_breadcrumbs() {
                   'hide_empty' => false,
               ));  
 
-              echo '<li class="item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . get_term_link($taxonomy[0]->term_id) . '" title="' . $post_type_object->labels->name . '">' . $taxonomy[0]->name . '</a></li>';
+              echo '<li class="item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . get_term_link($taxonomy[0]->term_id) . '" title="' . $taxonomy[0]->name . '">' . $taxonomy[0]->name . '</a></li>';
               echo '<li class="separator"> ' . $separator . ' </li>';
               
             }
