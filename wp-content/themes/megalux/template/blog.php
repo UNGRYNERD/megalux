@@ -3,6 +3,8 @@
 * Página Blog
 */
 
+$blog_page = get_option('page_for_posts');
+
 include( get_template_directory() . '/header.php');?>
 
 <main class="blog-page">
@@ -12,13 +14,13 @@ include( get_template_directory() . '/header.php');?>
       <div class="row align-items-end">
 
         <div class="col-12"> 
-          <h1 class="text-center">
-            <?php if(is_category()){
-              echo single_cat_title( '', false);
-            }else {
-              the_field('titulo_imagen_cabecera');
-            }?>
-          </h1>
+          
+            <?php if(is_category() || is_search()){?>
+              <h1 class="text-center"><?php echo single_cat_title( '', false); ?></h1>
+              <?php custom_breadcrumbs();
+            }else { ?>
+              <h1 class="text-center"><?php the_field('titulo_imagen_cabecera', $blog_page);?></h1>
+            <?php }?>
         </div>
 
       </div>

@@ -15,6 +15,7 @@ include('header.php');?>
 
           <div class="col-12">
             <h1 class="text-center"><?php echo single_cat_title( '', false);?></h1>
+            <?php custom_breadcrumbs(); ?>
           </div>
 
         </div>
@@ -115,7 +116,7 @@ include('header.php');?>
 
             <?php if (have_posts()) {
               while (have_posts()) { the_post();?>
-                <?php echo term_description(); echo $description;?>
+                <?php echo term_description();?>
                 <div class="col-12 col-md-6 col-lg-4">
                   <a href="<?php echo get_permalink(); ?>" class="col-project col-archive">
                      <?php echo print_thumbnail($post->ID);?>
@@ -145,6 +146,8 @@ include('header.php');?>
       </div>
     </div>
   </section>
+  
+  <?php include( get_template_directory() . '/template/content-relacionado.php'); ?>
 </main>
 
 <?php

@@ -23,14 +23,10 @@ img {
   position: relative;
 }
 
-.parallax {
-  background-attachment: fixed;
-  background-size: cover;
-  
+.parallax {  
   @media (max-width: 767px) {
     background-attachment: inherit
   }
-  
 }
 
 .form-control {
@@ -101,10 +97,13 @@ img {
       @include transition(0.4s ease all);
       opacity: 0;
       display: block;
+      max-height: 0;
+      overflow: hidden;
     }
     
-    &:hover>.dropdown-menu {
+    &:hover .dropdown-menu {
       opacity: 1;
+      max-height: 500px;
     }
   }
 }

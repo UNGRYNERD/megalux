@@ -114,8 +114,8 @@
               <?php } if(get_field('enlaces_paginas_legales', 'option')){
   
                foreach (get_field('enlaces_paginas_legales', 'option') as $item){ ?>
-                  <a href="<?php echo get_permalink($item[pagina_legal]->ID);?>">
-                    <?php echo $item[pagina_legal]->post_title;?>
+                  <a href="<?php echo get_permalink($item['pagina_legal']->ID);?>">
+                    <?php echo $item['pagina_legal']->post_title;?>
                   </a>
                <?php }
 

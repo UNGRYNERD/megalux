@@ -7,7 +7,15 @@ $post_tags = get_the_tags();
 ?>
 
 <main class="single-post">
- <section class="box-header"></section>
+  <section class="box-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <?php custom_breadcrumbs(); ?>
+        </div>
+      </div>
+    </div>
+  </section>
  
  
   <section class="box-content">

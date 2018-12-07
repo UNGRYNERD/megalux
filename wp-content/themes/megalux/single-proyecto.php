@@ -5,7 +5,15 @@ $proyecto = get_field('pagina_de_proyectos', 'option');
 if (have_posts()) : while (have_posts()) : the_post();?>
 
 <main class="single-content single-content--<?php echo $post->post_type?>">
-  <section class="box-header"></section>
+  <section class="box-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <?php custom_breadcrumbs(); ?>
+        </div>
+      </div>
+    </div>
+  </section>
   
   <section class="box-content box-info-post">
     <div class="container">
@@ -39,8 +47,8 @@ if (have_posts()) : while (have_posts()) : the_post();?>
               <div class="thumbslider">
                 <ul id="lightSlider">
                   <?php foreach(get_field('galeria') as $item){?>
-                    <li data-thumb="<?php echo $item[url]?>">
-                      <img src="<?php echo $item[url]?>" />
+                    <li data-thumb="<?php echo $item['url']?>">
+                      <img src="<?php echo $item['url']?>" />
                     </li>
                   <?php }?>
                 </ul>
@@ -66,7 +74,7 @@ if (have_posts()) : while (have_posts()) : the_post();?>
 
           <div class="col-12 text-center">
             <a href="<?php echo get_field('url_banner');?>" class="box-cta">
-              <img class="img-border" src="<?php echo get_field('imagen_banner')[url];?>" alt="<?php echo get_field('imagen_banner')[alt];?>" title="<?php echo get_field('imagen_banner')[title];?>">
+              <img class="img-border" src="<?php echo get_field('imagen_banner')['url'];?>" alt="<?php echo get_field('imagen_banner')['alt'];?>" title="<?php echo get_field('imagen_banner')['title'];?>">
             </a>
           </div>
 
@@ -99,8 +107,8 @@ if (have_posts()) : while (have_posts()) : the_post();?>
 
                   <div class="col-12 col-md-6 col-lg-3 ">
                     <a href="<?php echo get_permalink(); ?>" class="col-project">
-                      <?php if(get_field('galeria', $proyecto['proyecto_destacado']->ID )[0]){ ?>
-                        <img src="<?php echo get_field('galeria')[0][url];?>" alt="<?php echo get_field('galeria')[0][alt];?>" title="<?php echo get_field('galeria')[0][title];?>">
+                      <?php if(get_field('galeria')){ ?>
+                        <img src="<?php echo get_field('galeria')[0]['url'];?>" alt="<?php echo get_field('galeria')[0][alt];?>" title="<?php echo get_field('galeria')[0]['title'];?>">
                       <?php }?>
 
                       <p><?php the_title(); ?></p>

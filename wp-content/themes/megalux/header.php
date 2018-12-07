@@ -57,8 +57,8 @@
               <?php } if(get_field('selector_idiomas', 'option')){?>
                 <div class="lang-switch text-right">
                   <?php foreach(get_field('selector_idiomas', 'option') as $item){?>
-                    <a href="<?php echo $item[url_pagina]?>">
-                      <?php echo $item[idioma]?>
+                    <a href="<?php echo $item['url_pagina']?>">
+                      <?php echo $item['idioma']?>
                     </a>
                   <?php } ?>
                 </div>
@@ -93,15 +93,15 @@
                   <a href="<?php echo home_url();?>">
                     <?php if ( get_field('logo', 'option')) { ?>
                      
-                      <img class="logo" src="<?php echo get_field('logo', 'option')[url];?>" alt="<?php echo get_field('logo', 'option')[alt];?>" title="<?php echo get_field('logo', 'option')[title];?>">
+                      <img class="logo" src="<?php echo get_field('logo', 'option')['url'];?>" alt="<?php echo get_field('logo', 'option')['alt'];?>" title="<?php echo get_field('logo', 'option')['title'];?>">
                       
                     <?php } if ( get_field('logo_scroll', 'option')) { ?>
                      
-                      <img class="logo__scroll" src="<?php echo get_field('logo_scroll', 'option')[url];?>" alt="<?php echo get_field('logo_scroll', 'option')[alt];?>" title="<?php echo get_field('logo_scroll', 'option')[title];?>">
+                      <img class="logo__scroll" src="<?php echo get_field('logo_scroll', 'option')['url'];?>" alt="<?php echo get_field('logo_scroll', 'option')['alt'];?>" title="<?php echo get_field('logo_scroll', 'option')['title'];?>">
                       
                     <?php } if ( get_field('logo_movil', 'option')) { ?>
                      
-                      <img class="logo__movil" src="<?php echo get_field('logo_movil', 'option')[url];?>" alt="<?php echo get_field('logo_movil', 'option')[alt];?>" title="<?php echo get_field('logo_movil', 'option')[title];?>">
+                      <img class="logo__movil" src="<?php echo get_field('logo_movil', 'option')['url'];?>" alt="<?php echo get_field('logo_movil', 'option')['alt'];?>" title="<?php echo get_field('logo_movil', 'option')['title'];?>">
                       
                     <?php }?>
                   </a>

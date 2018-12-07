@@ -2,7 +2,15 @@
 if (have_posts()) : while (have_posts()) : the_post();?>
 
 <main class="single-content single-content--<?php echo $post->post_type?>">
-  <section class="box-header"></section>
+  <section class="box-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <?php custom_breadcrumbs(); ?>
+        </div>
+      </div>
+    </div>
+  </section>
   
   <section class="box-content box-info-post">
     <div class="container">
@@ -25,8 +33,8 @@ if (have_posts()) : while (have_posts()) : the_post();?>
         <div class="row-buttons">
           <?php if (get_field('botones_descarga')) {
             foreach(get_field('botones_descarga') as $item){?>
-              <a class="button button--outline button--blue" href="<?php echo $item[fichero]?>">
-                <?php echo $item[texto_boton]?>
+              <a class="button button--outline button--blue" href="<?php echo $item['fichero']?>">
+                <?php echo $item['texto_boton']?>
                 <img src="<?php echo get_template_directory_uri()?>/img/icons/flecha.png" alt="download icon">
               </a>
             <?php }
