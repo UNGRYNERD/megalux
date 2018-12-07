@@ -581,6 +581,47 @@ function custom_breadcrumbs() {
                 echo '<li class="item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . $post_type_archive . '" title="' . $post_type_object->labels->name . '">' . $post_type_object->labels->name . '</a></li>';
                 echo '<li class="separator"> ' . $separator . ' </li>';
               
+            } 
+          
+            // CPT PRODUCTOS
+            if($post_type == 'productos') {
+                  
+              $tax = get_terms(
+                'categoria_producto',
+                array(
+                  'hide_empty' => false,
+                  'parent' => 0
+                )
+              );
+
+              echo '<li class="item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . get_term_link($tax[0]->term_id) . '" title="' . $post_type_object->labels->name . '">' . $tax[0]->name . '</a></li>';
+              echo '<li class="separator"> ' . $separator . ' </li>';
+              
+              $tax_child = get_terms(
+                'categoria_producto',
+                array(
+                  'hide_empty' => false,
+                  'parent' => $tax[0]->term_id
+                )
+              );
+              
+              if($tax_child){
+                echo '<li class="item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . get_term_link($tax_child[0]->term_id) . '" title="' . $post_type_object->labels->name . '">' . $tax_child[0]->name . '</a></li>';
+                echo '<li class="separator"> ' . $separator . ' </li>';
+              }
+            }   
+          
+            // CPT PROYECTO
+            if($post_type == 'proyecto') {
+                  
+              $taxonomy = get_terms( array(
+                  'taxonomy' => 'tipo',
+                  'hide_empty' => false,
+              ));  
+
+              echo '<li class="item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . get_term_link($taxonomy[0]->term_id) . '" title="' . $post_type_object->labels->name . '">' . $taxonomy[0]->name . '</a></li>';
+              echo '<li class="separator"> ' . $separator . ' </li>';
+              
             }
               
             // Get post category info
@@ -689,63 +730,12 @@ function custom_breadcrumbs() {
             // Display the tag name
             echo '<li class="item-current item-tag-' . $get_term_id . ' item-tag-' . $get_term_slug . '">' . $get_term_name . '</li>';
            
-        } /*elseif ( is_day() ) {
-               
-            // Day archive
-               
-            // Year link
-            echo '<li class="item-year item-year-' . get_the_time('Y') . '"><a class="bread-year bread-year-' . get_the_time('Y') . '" href="' . get_year_link( get_the_time('Y') ) . '" title="' . get_the_time('Y') . '">' . get_the_time('Y') . ' Archives</a></li>';
-            echo '<li class="separator separator-' . get_the_time('Y') . '"> ' . $separator . ' </li>';
-               
-            // Month link
-            echo '<li class="item-month item-month-' . get_the_time('m') . '"><a class="bread-month bread-month-' . get_the_time('m') . '" href="' . get_month_link( get_the_time('Y'), get_the_time('m') ) . '" title="' . get_the_time('M') . '">' . get_the_time('M') . ' Archives</a></li>';
-            echo '<li class="separator separator-' . get_the_time('m') . '"> ' . $separator . ' </li>';
-               
-            // Day display
-            echo '<li class="item-current item-' . get_the_time('j') . '"><strong class="bread-current bread-' . get_the_time('j') . '"> ' . get_the_time('jS') . ' ' . get_the_time('M') . ' Archives</strong></li>';
-               
-        } else if ( is_month() ) {
-               
-            // Month Archive
-               
-            // Year link
-            echo '<li class="item-year item-year-' . get_the_time('Y') . '"><a class="bread-year bread-year-' . get_the_time('Y') . '" href="' . get_year_link( get_the_time('Y') ) . '" title="' . get_the_time('Y') . '">' . get_the_time('Y') . ' Archives</a></li>';
-            echo '<li class="separator separator-' . get_the_time('Y') . '"> ' . $separator . ' </li>';
-               
-            // Month display
-            echo '<li class="item-month item-month-' . get_the_time('m') . '"><strong class="bread-month bread-month-' . get_the_time('m') . '" title="' . get_the_time('M') . '">' . get_the_time('M') . ' Archives</strong></li>';
-               
-        } else if ( is_year() ) {
-               
-            // Display year archive
-            echo '<li class="item-current item-current-' . get_the_time('Y') . '"><strong class="bread-current bread-current-' . get_the_time('Y') . '" title="' . get_the_time('Y') . '">' . get_the_time('Y') . ' Archives</strong></li>';
-               
-        } else if ( is_author() ) {
-               
-            // Auhor archive
-               
-            // Get the author information
-            global $author;
-            $userdata = get_userdata( $author );
-               
-            // Display author name
-            echo '<li class="item-current item-current-' . $userdata->user_nicename . '"><strong class="bread-current bread-current-' . $userdata->user_nicename . '" title="' . $userdata->display_name . '">' . 'Author: ' . $userdata->display_name . '</strong></li>';
-           
-        } else if ( get_query_var('paged') ) {
-               
-            // Paginated archives
-            echo '<li class="item-current item-current-' . get_query_var('paged') . '"><strong class="bread-current bread-current-' . get_query_var('paged') . '" title="Page ' . get_query_var('paged') . '">'.__('Page') . ' ' . get_query_var('paged') . '</strong></li>';
-               
-        }*/ else if ( is_search() ) {
+        }  else if ( is_search() ) {
            
             // Search results page
             echo '<li class="item-current item-current-' . get_search_query() . '">' . __('Resultados para: ', 'megalux') . ' " ' . get_search_query() . '"</li>';
            
-        } /*elseif ( is_404() ) {
-               
-            // 404 page
-            echo '<li>' . 'Error 404' . '</li>';
-        }*/
+        }
        
         echo '</ul>';
            
