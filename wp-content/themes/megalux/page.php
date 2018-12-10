@@ -9,6 +9,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
 
         <div class="col-12"> 
           <h1 class="text-center"><?php the_title();?></h1>
+          <?php custom_breadcrumbs(); ?>          
         </div>
 
       </div>
