@@ -31,8 +31,6 @@ $(document).ready(function() {
       var width = $(window).width();
 
       $('main').css('min-height' , height);
-
-      parallaxIt(); 
       
       $('.smooth-scroll').bind('click', function(e) {
         e.preventDefault(); 
