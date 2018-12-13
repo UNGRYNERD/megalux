@@ -24,8 +24,8 @@ include('header.php');?>
 
   <section class="box-content">
     <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-3 order-2 order-md-0">
+      <div class="row justify-content-between">
+        <div class="col-12 col-md-3 order-2 order-md-0 col-sidebar">
 
           <div id="accordion" class="sidebar-taxonomy">
 
@@ -109,38 +109,47 @@ include('header.php');?>
 
 
         <div class="col-12 col-md-9">
-          <div class="row">
-            <div class="col-12">
-              <?php echo term_description(); ?>
-            </div>
-
-            <?php if (have_posts()) {
-              while (have_posts()) { the_post();?>
-                <?php echo term_description();?>
-                <div class="col-12 col-md-6 col-lg-4">
-                  <a href="<?php echo get_permalink(); ?>" class="col-project col-archive">
-                     <?php echo print_thumbnail($post->ID);?>
-                    <p><?php the_title(); ?></p>
-                  </a>
-                </div>
-              <?php } 
-            } else {?>
-              <div class="col-12">
-                <h3 class="text-center">
-                  <?php echo __('No hay productos en esta categoría','megalux');?>
-                </h3>
-              </div>
-            <?php }
-            
-            if(get_field('texto_listado', $producto)){?>
-              <div class="col-12">
-                <div class="content">
-                  <?php echo get_field('texto_listado', $producto)?>
+           <?php if(term_description()){?>
+              <div class="row">
+                <div class="col-12">
+                  <?php echo term_description(); ?>
                 </div>
               </div>
             <?php }?>
 
-          </div>
+            <?php if (have_posts()) { ?>
+             <div class="row row-product">
+                <?php while (have_posts()) { the_post();?>
+                  <?php echo term_description();?>
+                  <div class="col-12 col-md-6 col-lg-4 col-product">
+                    <a href="<?php echo get_permalink(); ?>" class="col-project col-archive" style="background-image: url('<?php echo post_image_size();?>')">
+                       <?php //echo print_thumbnail($post->ID); ?>
+                      <p><?php the_title(); ?></p>
+                    </a>
+                  </div>
+                <?php } ?> 
+              </div>
+            <?php } else {?>
+              <div class="row">
+                <div class="col-12">
+                  <h3 class="text-center">
+                    <?php echo __('No hay productos en esta categoría','megalux');?>
+                  </h3>
+                </div>
+              </div>
+            <?php }
+            
+            if(get_field('texto_listado', $producto)){?>
+             <div class="row">
+                <div class="col-12">
+                  <div class="content">
+                    <?php echo get_field('texto_listado', $producto)?>
+                  </div>
+                </div>
+              </div>
+            <?php }?>
+
+          
         </div>
 
       </div>

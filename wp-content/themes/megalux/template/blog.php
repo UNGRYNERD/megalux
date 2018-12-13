@@ -31,7 +31,7 @@ include( get_template_directory() . '/header.php');?>
   <section class="box-content">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-md-8 col-lg-9">
+        <div class="col-12 col-md-8 col-lg-9 col-blog">
           <div class="row">
             <?php 
 
@@ -51,7 +51,7 @@ include( get_template_directory() . '/header.php');?>
                   while (have_posts()) {
                     the_post(); $terms = get_the_terms( $post->ID, 'category' );?>
 
-                      <div class="col-12 col-lg-6 box-post-title">
+                      <div class="col-12 col-lg-6 box-post-title blog-item">
                         <a href="<?php echo get_permalink(); ?>" class="col-project col-post">
                            <?php echo print_thumbnail($post->ID);?>
                           <p><?php the_title(); ?></p>

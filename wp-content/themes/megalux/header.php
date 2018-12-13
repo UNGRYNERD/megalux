@@ -95,15 +95,7 @@
                      
                       <img class="logo" src="<?php echo get_field('logo', 'option')['url'];?>" alt="<?php echo get_field('logo', 'option')['alt'];?>" title="<?php echo get_field('logo', 'option')['title'];?>">
                       
-                    <?php } /*if ( get_field('logo_scroll', 'option')) { ?>
-                     
-                      <img class="logo__scroll" src="<?php echo get_field('logo_scroll', 'option')['url'];?>" alt="<?php echo get_field('logo_scroll', 'option')['alt'];?>" title="<?php echo get_field('logo_scroll', 'option')['title'];?>">
-                      
-                    <?php } if ( get_field('logo_movil', 'option')) { ?>
-                     
-                      <img class="logo__movil" src="<?php echo get_field('logo_movil', 'option')['url'];?>" alt="<?php echo get_field('logo_movil', 'option')['alt'];?>" title="<?php echo get_field('logo_movil', 'option')['title'];?>">
-                      
-                    <?php }*/?>
+                    <?php } ?>
                   </a>
                 </div> 
               <?php }?>

@@ -204,10 +204,10 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <?php } if ($item['proyectos']){ 
                   foreach ($item['proyectos'] as $proyecto){?>
                   
-                  <div class="col-12 col-md-6 col-lg-4">
+                  <div class="col-12 col-md-4 col-item">
                     <a href="<?php echo get_permalink($proyecto['proyecto_destacado']); ?>" class="col-project">
-                     <?php if(get_field('galeria', $proyecto['proyecto_destacado']->ID )[0]){ ?>
-                       <img src="<?php echo get_field('galeria', $proyecto['proyecto_destacado']->ID )[0]['url'];?>" alt="<?php echo get_field('galeria', $proyecto['proyecto_destacado']->ID )[0]['alt'];?>" title="<?php echo get_field('galeria', $proyecto['proyecto_destacado']->ID )[0]['title'];?>">
+                     <?php if(get_field('galeria', $proyecto['proyecto_destacado']->ID )[0]){ /*echo '<pre>';print_r(get_field('galeria', $proyecto['proyecto_destacado']->ID ));echo '</pre>'*/?>
+                       <img src="<?php echo get_field('galeria', $proyecto['proyecto_destacado']->ID )[0]['sizes']['large'];?>" alt="<?php echo get_field('galeria', $proyecto['proyecto_destacado']->ID )[0]['alt'];?>" title="<?php echo get_field('galeria', $proyecto['proyecto_destacado']->ID )[0]['title'];?>">
                      <?php }?>
 
                       <p><?php echo $proyecto['proyecto_destacado']->post_title; ?></p>

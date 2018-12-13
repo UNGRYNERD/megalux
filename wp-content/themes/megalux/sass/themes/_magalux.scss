@@ -198,6 +198,16 @@ body {
 .box-proyectos {
   padding: 90px 0;
   
+  .container {
+    max-width: 1190px;
+    padding: 0 10px;
+    
+    .row {
+      margin-right: -5px;
+      margin-left: -5px;
+    }
+  }
+  
   @media (max-width: 767px){
     padding: 40px 0;
   }
@@ -213,7 +223,7 @@ body {
 .col-project {
   position: relative;
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   min-height: 120px;
   
   &:hover{
@@ -251,12 +261,21 @@ body {
   // Archive
   &.col-archive {
     border: 1px solid #eceef0;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
     
     p {
       font-family: $tipo-regular;
     }
     
     img {
+      max-width: initial;
+      height: auto;
+      width: 266px;
+      top: 50%;
+      position: relative;
+      @include transform(translateY(-50%));
       @include transition(0.5s ease all);
     }
     
@@ -277,6 +296,39 @@ body {
     }
   }
 
+}
+
+// col para proyectos en miniatura con tamaño especifico
+.col-item {
+  padding: 0 5px;
+  
+  .col-project {
+    margin-bottom: 10px;
+    overflow: hidden;
+    
+    img {
+      max-width: initial;
+      height: 243px;
+      left: 50%;
+      position: relative;
+      @include transform(translateX(-50%));
+      
+      @media (max-width: 1024px) {
+        height: 200px;
+      }
+      
+      @media (max-width: 768px) {
+        height: 150px;
+      }
+            
+      @media (max-width: 767px){
+        max-width: 100%;
+        height: initial;
+        left: initial;
+        @include transform(translateX(0));
+      }
+    }
+  }
 }
 
 .row-buttons {
@@ -616,6 +668,25 @@ form.wpcf7-form {
 
 .box-relacionado {
   background-color: #fff;
+  
+  .container {
+    
+    padding-left: 7px;
+    padding-right: 7px;
+    
+    .row {
+      margin-right: -7px;
+      margin-left: -7px;
+    }
+  }
+  
+  .col-relacionado {
+    padding: 0 7px;
+    
+    p {
+      font-family: $tipo-light;
+    }
+  }
 }
 
 // Single proyecto
@@ -659,6 +730,10 @@ form.wpcf7-form {
     
     &.page-product{
       background-color: #fff;
+      
+      .box-content {
+        padding-top: 45px;
+      }
     }
     
     .box-info-post {
@@ -691,6 +766,16 @@ form.wpcf7-form {
         }
       }
     }
+    
+    //listado productos
+    .row-product {
+      margin: 0 -11px;
+      
+      .col-product {
+        padding: 0 11px;
+      }
+    }
+    
   }
   
 }
@@ -896,65 +981,68 @@ form.wpcf7-form {
   }
 }
 
-.sidebar-taxonomy {
+.col-sidebar {
+  max-width: 270px;
   
-  margin-bottom: 50px;
-    
-  h4 {
-    text-transform: uppercase;
-    color: $azulboton;
-    font-size: 16px;
-    margin-bottom: 30px;
-  }
-  
-  .panel {
-    
-    border-top: 1px solid $azultop;
-        
-    .panel-header {
-      position: relative;
-      
-      .btn-link {
-        color: $azultitulos;
-        padding: 11px 0 9px;
-        margin-bottom: 10px;
-        font-size: 14px;
-        width: 100%;
-        text-align: left;
-      }
-      
-      &:after{
-        content: "";
-        position: absolute;
-        right: 10px;
-        top: 18px;
-        border: solid $azultitulos;
-        border-width: 0 2px 2px 0;
-        display: inline-block;
-        padding: 3px;
-        vertical-align: middle;
-        @include transform(rotate(45deg));
-      }
-      
+  .sidebar-taxonomy {
+    margin-bottom: 50px;
+
+    h4 {
+      text-transform: uppercase;
+      color: $azulboton;
+      font-size: 16px;
+      margin-bottom: 30px;
     }
-    
-    .panel-body {
-      a, .btn-link {
-        display: block;
-        color: $azultitulos;
-        font-family: $tipo-bold;
-        padding: 10px 0;
-        border-top: 1px solid $azultop;
+
+    .panel {
+
+      border-top: 1px solid $azultop;
+
+      .panel-header {
+        position: relative;
+
+        .btn-link {
+          color: $azultitulos;
+          padding: 11px 0 9px;
+          margin-bottom: 10px;
+          font-size: 14px;
+          width: 100%;
+          text-align: left;
+        }
+
+        &:after{
+          content: "";
+          position: absolute;
+          right: 10px;
+          top: 18px;
+          border: solid $azultitulos;
+          border-width: 0 2px 2px 0;
+          display: inline-block;
+          padding: 3px;
+          vertical-align: middle;
+          @include transform(rotate(45deg));
+        }
+
       }
-      
-      .btn-link {
-        border: none;
-        font-size: 14px;
-      }
-      
+
       .panel-body {
-        a {
-          color: $azulsubtitulos;
+        a, .btn-link {
+          display: block;
+          color: $azultitulos;
+          font-family: $tipo-bold;
+          padding: 10px 0;
+          border-top: 1px solid $azultop;
+        }
+
+        .btn-link {
+          border: none;
+          font-size: 14px;
+        }
+
+        .panel-body {
+          a {
+            color: $azulsubtitulos;
+          }
         }
       }
     }
@@ -965,6 +1053,18 @@ form.wpcf7-form {
 .blog-page{
   .box-header {
     background-image: url('../img/blog-background.jpg');
+  }
+  
+  .container {
+    .col-blog{
+      .row {        
+        margin: 0 -10px;
+        
+        .blog-item {
+          padding: 0 10px;
+        }
+      }
+    }
   }
 }
 

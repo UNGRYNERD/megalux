@@ -7,7 +7,10 @@ $(document).ready(function() {
 
   var height = $(window).height();
   var width = $(window).width();
-
+  
+  var anchoproducto = $('.page-product .col-project.col-archive').width();
+  $('.page-product .col-project.col-archive').css('min-height', anchoproducto);
+  
   if(width > 767) {
     $('main').css('min-height' , height);
     
@@ -31,6 +34,9 @@ $(document).ready(function() {
       var width = $(window).width();
 
       $('main').css('min-height' , height);
+      
+      var anchoproducto = $('.page-product .col-project.col-archive').width();
+      $('.page-product .col-project.col-archive').css('min-height', anchoproducto);
       
       $('.smooth-scroll').bind('click', function(e) {
         e.preventDefault(); 

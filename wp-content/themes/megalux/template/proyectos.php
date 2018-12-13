@@ -69,7 +69,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
 
                $terms = get_the_terms( $post->ID, 'tipo' );?>
 
-                  <div class="col-12 col-md-6 col-lg-4 item <?php foreach($terms as $item){echo $item->slug.' '; }?> ">
+                  <div class="col-12 col-md-4 col-item <?php foreach($terms as $item){echo $item->slug.' '; }?> ">
                     <a href="<?php echo get_permalink(); ?>" class="col-project">
                       <?php if(get_field('galeria')){ ?>
                         <img src="<?php echo get_field('galeria')[0]['url'];?>" alt="<?php echo get_field('galeria')[0]['alt'];?>" title="<?php echo get_field('galeria')[0]['title'];?>">
@@ -111,7 +111,7 @@ include( get_template_directory() . '/footer.php'); ?>
 $(document).ready(function(){
     setTimeout(function(){
       var $container = $('#container').isotope({
-        itemSelector : '.item',
+        itemSelector : '.col-item',
         isFitWidth: true
       });
 
