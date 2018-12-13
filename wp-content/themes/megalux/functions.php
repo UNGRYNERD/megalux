@@ -105,7 +105,7 @@ function print_thumbnail($id,$size="large"){
 // Front
 function jk_scripts() {
   wp_enqueue_style( 'jk-theme-style', get_stylesheet_uri(), array(), '1.00' );
-  wp_enqueue_style( 'jk-main-styles', get_template_directory_uri() . '/sass/style.css', array(), '0.07');
+  wp_enqueue_style( 'jk-main-styles', get_template_directory_uri() . '/sass/style.css', array(), '0.09');
   
   if (!is_admin()) {
     wp_deregister_script('jquery');

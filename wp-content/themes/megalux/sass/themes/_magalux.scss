@@ -264,6 +264,7 @@ body {
     overflow: hidden;
     background-position: center;
     background-size: cover;
+    @include transition(none);
     
     p {
       font-family: $tipo-regular;
