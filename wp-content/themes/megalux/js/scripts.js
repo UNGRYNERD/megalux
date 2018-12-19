@@ -60,6 +60,16 @@ $(document).ready(function() {
 
     });
   }
+  
+  // ICONO DROPDOWN MENU
+  $('.nav-link.dropdown-toggle').after('<i class="fas fa-chevron-down"></i>');
+  
+  if(width < 991) {
+    $('.menu-item-has-children .fa-chevron-down').on('click', function(){
+      $(this).next().toggleClass('show');
+      console.log('click');
+    });  
+  }  
 
   // MENU TOOGLE
 
@@ -68,7 +78,6 @@ $(document).ready(function() {
     $('#navbarResponsive').toggleClass('open');
 
     $('body').toggleClass('no-scroll');
-    console.log('click');
   });
 
   if (width < 768) {
