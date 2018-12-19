@@ -19,17 +19,17 @@
         <div class="container">
          <div class="row justify-content-between">
             <?php if(get_field('telefono_superior', 'option') || get_field('enlace', 'option')) {?>
-            <div class="col-6">
-              <?php if(get_field('telefono_superior', 'option')){?>
-                <a href="tel:<?php formatPhone(get_field('telefono_superior', 'option'));?>" class="link-tel">
-                  <?php the_field('telefono_superior', 'option');?>
-                </a>
-              <?php } if(get_field('enlace', 'option')){?>
-                <a href="<?php echo get_permalink(get_field('enlace', 'option')->ID)?>">
-                  <?php echo get_field('enlace', 'option')->post_title;?>
-                </a>
-              <?php }?>
-            </div>
+              <div class="col-6">
+                <?php if(get_field('telefono_superior', 'option')){?>
+                  <a href="tel:<?php formatPhone(get_field('telefono_superior', 'option'));?>" class="link-tel">
+                    <?php the_field('telefono_superior', 'option');?>
+                  </a>
+                <?php } if(get_field('enlace', 'option')){?>
+                  <a href="<?php echo get_permalink(get_field('enlace', 'option')->ID)?>">
+                    <?php echo get_field('enlace', 'option')->post_title;?>
+                  </a>
+                <?php }?>
+              </div>
             <?php }?>
             <div class="col-6 text-right">
               <?php if( get_field('facebook', 'option') || get_field('youtube', 'option') || get_field('twitter', 'option') || get_field('linkedin', 'option')){?> 
@@ -124,7 +124,56 @@
                   'menu_class'        => 'navbar',
                   'walker'            => new WP_Bootstrap_Navwalker(),
                 ) );
-                ?>
+                
+                if(get_field('telefono_superior', 'option') || get_field('enlace', 'option')) {?>
+                  <div class="mobile-menu-extra">
+                    <div class="links-extra">
+                      <?php if(get_field('telefono_superior', 'option')){?>
+                        <a href="tel:<?php formatPhone(get_field('telefono_superior', 'option'));?>" class="link-tel ">
+                          <?php the_field('telefono_superior', 'option');?>
+                        </a>
+                      <?php } if(get_field('enlace', 'option')){?>
+                        <a href="<?php echo get_permalink(get_field('enlace', 'option')->ID)?>">
+                          <?php echo get_field('enlace', 'option')->post_title;?>
+                        </a>
+                      <?php }?>
+                    </div>
+                    <div class="social-menu-mobile">
+                      <?php if( get_field('facebook', 'option') || get_field('youtube', 'option') || get_field('twitter', 'option') || get_field('linkedin', 'option')){?> 
+
+                        <div class="social-box">
+                          <?php if(get_field('facebook', 'option')){?>
+                            <a href="<?php echo get_field('facebook', 'option');?>" target="_blank">
+                              <i class="fab fa-facebook-f"></i>
+                            </a>
+                          <?php } if(get_field('youtube', 'option')){?>
+                            <a href="<?php echo get_field('youtube', 'option');?>" target="_blank">
+                              <i class="fab fa-youtube"></i>
+                            </a>
+                          <?php } if(get_field('twitter', 'option')){?>
+                            <a href="<?php echo get_field('twitter', 'option');?>" target="_blank">
+                              <i class="fab fa-twitter"></i>
+                            </a>
+                          <?php } if(get_field('linkedin', 'option')){?>
+                            <a href="<?php echo get_field('linkedin', 'option');?>" target="_blank">
+                              <i class="fab fa-linkedin-in"></i>
+                            </a>
+                          <?php }?>
+                        </div>
+
+                      <?php } if(get_field('selector_idiomas', 'option')){?>
+                        <div class="lang-switch">
+                          <?php foreach(get_field('selector_idiomas', 'option') as $item){?>
+                            <a href="<?php echo $item['url_pagina']?>">
+                              <?php echo $item['idioma']?>
+                            </a>
+                          <?php } ?>
+                        </div>
+                      <?php }?>
+
+                    </div>
+                  </div>
+              <?php }?>
             </nav>  
 
               <div class="col-auto align-self-center d-flex justify-content-end d-lg-none">
