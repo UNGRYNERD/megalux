@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: 'lato-light';
-  font-style: normal;
+  font-weight: 300;
   src: url('../fonts/lato-light/lato-light.eot'); /* IE9 Compat Modes */
   src: url('../fonts/lato-light/lato-light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('../fonts/lato-light/lato-light.woff2') format('woff2'), /* Super Modern Browsers */
@@ -18,7 +18,7 @@
 // Bold
 @font-face {
   font-family: 'lato-bold';
-  font-style: normal;
+  font-weight: 700;
   src: url('../fonts/lato-bold/lato-bold.eot'); /* IE9 Compat Modes */
   src: url('../fonts/lato-bold/lato-bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('../fonts/lato-bold/lato-bold.woff2') format('woff2'), /* Super Modern Browsers */
@@ -30,7 +30,7 @@
 // Regular
 @font-face {
   font-family: 'lato-regular';
-  font-style: normal;
+  font-weight: 400;
   src: url('../fonts/lato-regular/lato-regular.eot'); /* IE9 Compat Modes */
   src: url('../fonts/lato-regular/lato-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('../fonts/lato-regular/lato-regular.woff2') format('woff2'), /* Super Modern Browsers */

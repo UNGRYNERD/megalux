@@ -127,7 +127,7 @@ function jk_scripts() {
       'jk-js',
        get_template_directory_uri() . '/js/scripts.min.js',
         array('jquery'),
-        '0.05',
+        '0.07',
         true
     );
     wp_enqueue_script(

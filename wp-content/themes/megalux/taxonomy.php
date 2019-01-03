@@ -36,6 +36,8 @@ include('header.php');?>
                 'categoria_producto',
                 array(
                   'hide_empty' => false,
+                  'orderby' => name,
+                  'order' => 'DESC',
                   'parent' => 0
                 )
               );
@@ -120,7 +122,6 @@ include('header.php');?>
             <?php if (have_posts()) { ?>
              <div class="row row-product">
                 <?php while (have_posts()) { the_post();?>
-                  <?php echo term_description();?>
                   <div class="col-12 col-md-6 col-lg-4 col-product">
                     <a href="<?php echo get_permalink(); ?>" class="col-project col-archive" style="background-image: url('<?php echo post_image_size();?>')">
                        <?php //echo print_thumbnail($post->ID); ?>

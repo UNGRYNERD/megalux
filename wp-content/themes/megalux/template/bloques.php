@@ -139,7 +139,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
             <div class="container">
               <div class="row">
                 <?php foreach($item['testimonios'] as $test){ ?>
-                  <div class="col-12 col-sm-6 col-md-4 d-flex">
+                  <div class="col-12 col-sm-6 col-md-4 d-flex animate">
                     <div class="col-test">
                       <?php if(print_thumbnail($test['elegir_testimonios']->ID)){ 
                         echo print_thumbnail($test['elegir_testimonios']->ID);
@@ -156,8 +156,10 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
               </div>
               <div class="row">
                 <?php if($item['texto']){?>
-                  <div class="content">
-                    <?php echo $item['texto'];?>
+                  <div class="col-12">
+                    <div class="content">
+                      <?php echo $item['texto'];?>
+                    </div>
                   </div>
                 <?php }
                                                    
@@ -184,7 +186,15 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
         <?php }
         
         //proyectos destacados
-        if($item['acf_fc_layout'] == 'proyectos_destacados') {?>
+        if($item['acf_fc_layout'] == 'proyectos_destacados') {
+          
+          if(is_front_page()){
+            $animate = ' animate';
+          } else {
+            $animate = ' ';
+          }
+  
+        ?>
         
           <section class="box-content box-proyectos">
             <div class="container">
@@ -201,21 +211,25 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                     <?php echo $item['texto_superior'];?>
                   </div>
                   
-                <?php } if ($item['proyectos']){ 
-                  foreach ($item['proyectos'] as $proyecto){?>
-                  
-                  <div class="col-12 col-md-4 col-item">
-                    <a href="<?php echo get_permalink($proyecto['proyecto_destacado']); ?>" class="col-project">
-                     <?php if(get_field('galeria', $proyecto['proyecto_destacado']->ID )[0]){ /*echo '<pre>';print_r(get_field('galeria', $proyecto['proyecto_destacado']->ID ));echo '</pre>'*/?>
-                       <img src="<?php echo get_field('galeria', $proyecto['proyecto_destacado']->ID )[0]['sizes']['large'];?>" alt="<?php echo get_field('galeria', $proyecto['proyecto_destacado']->ID )[0]['alt'];?>" title="<?php echo get_field('galeria', $proyecto['proyecto_destacado']->ID )[0]['title'];?>">
-                     <?php }?>
+                <?php } if ($item['proyectos']){ ?>
+                  <div class="content-projects col-12 <?php echo $animate;?>">
+                    <div class="row">
+                      <?php foreach ($item['proyectos'] as $proyecto){?>
 
-                      <p><?php echo $proyecto['proyecto_destacado']->post_title; ?></p>
-                    </a>
+                        <div class="col-12 col-md-4 col-item">
+                          <a href="<?php echo get_permalink($proyecto['proyecto_destacado']); ?>" class="col-project">
+                           <?php if(get_field('galeria', $proyecto['proyecto_destacado']->ID )[0]){ /*echo '<pre>';print_r(get_field('galeria', $proyecto['proyecto_destacado']->ID ));echo '</pre>'*/?>
+                             <img src="<?php echo get_field('galeria', $proyecto['proyecto_destacado']->ID )[0]['sizes']['large'];?>" alt="<?php echo get_field('galeria', $proyecto['proyecto_destacado']->ID )[0]['alt'];?>" title="<?php echo get_field('galeria', $proyecto['proyecto_destacado']->ID )[0]['title'];?>">
+                           <?php }?>
+
+                            <p><?php echo $proyecto['proyecto_destacado']->post_title; ?></p>
+                          </a>
+                        </div>
+
+                      <?php } ?>
+                    </div>
                   </div>
-                
-                <?php }
-                }//endif itemproyecto
+                <?php }//endif itemproyecto
                                                             
                 if($item['botones']){ 
                   
