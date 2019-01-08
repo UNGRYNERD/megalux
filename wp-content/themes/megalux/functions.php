@@ -105,7 +105,7 @@ function print_thumbnail($id,$size="large"){
 // Front
 function jk_scripts() {
   wp_enqueue_style( 'jk-theme-style', get_stylesheet_uri(), array(), '1.00' );
-  wp_enqueue_style( 'jk-main-styles', get_template_directory_uri() . '/sass/style.css', array(), '0.11');
+  wp_enqueue_style( 'jk-main-styles', get_template_directory_uri() . '/sass/style.css', array(), '0.12');
   
   if (!is_admin()) {
     wp_deregister_script('jquery');
@@ -737,6 +737,16 @@ function custom_breadcrumbs() {
        
         echo '</ul>';
            
-    }
-       
+    }  
 }
+
+/**
+ * Custom posts per page for Taxonomy
+ */
+function cs_custom_posts_per_page( $query ) {
+	if ( is_tax( 'categoria_producto' ) ) {
+        $query->query_vars['posts_per_page'] = -1;
+        return;
+    }
+}
+add_filter( 'pre_get_posts', 'cs_custom_posts_per_page' );

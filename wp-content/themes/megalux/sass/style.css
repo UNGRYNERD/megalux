@@ -17117,17 +17117,25 @@ img {
       top: 9px;
       left: 0; } }
 
-/* line 167, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_default.scss */
+/* line 165, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_default.scss */
+.content iframe {
+  max-width: 100%; }
+  @media (max-width: 767px) {
+    /* line 165, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_default.scss */
+    .content iframe {
+      max-height: 200px; } }
+
+/* line 176, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_default.scss */
 img.alignright {
   float: right;
   margin: 0 0 1em 1em; }
 
-/* line 168, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_default.scss */
+/* line 177, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_default.scss */
 img.alignleft {
   float: left;
   margin: 0 1em 1em 0; }
 
-/* line 169, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_default.scss */
+/* line 178, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_default.scss */
 img.aligncenter {
   display: block;
   margin-left: auto;
