@@ -4,7 +4,7 @@
 * Template name: Productos
 */
 
-$producto = get_field('pagina_de_productos','option');;
+$producto = get_field('pagina_de_productos','option');
 
 include('header.php');?>
 
@@ -157,7 +157,36 @@ include('header.php');?>
     </div>
   </section>
   
-  <?php include( get_template_directory() . '/template/content-relacionado.php'); ?>
+  <section class="box-content box-relacionado">
+    <div class="container">
+      <div class="row">
+
+        <?php if(get_field('titulo', $producto)){?>
+          <h2 class="text-center"><?php the_field('titulo', $producto); ?></h2>
+        <?php } if(get_field('paginas_relacionadas', $producto)){
+          foreach (get_field('paginas_relacionadas', $producto) as $proyecto) {
+            if($proyecto['imagen']){
+              $img = $proyecto['imagen']['sizes']['large'];
+            } else {
+              $img = get_template_directory_uri().'/img/default-img.jpg';
+            }?>
+
+              <div class="col-12 col-md-4 col-relacionado">
+                <a href="<?php echo get_permalink($proyecto['paginas']); ?>" class="col-project col-project--bg" style="background-image: url('<?php echo $img;?>');">
+                  <p><?php echo $proyecto['titulo_enlace'] ?></p>
+                </a>
+              </div>
+
+          <?php }
+        } if(get_field('texto', $producto)){?>
+          <div class="col-12 content">
+            <?php echo get_field('texto', $producto);?>
+          </div>
+        <?php }?>
+
+      </div>
+    </div>
+  </section>
 </main>
 
 <?php

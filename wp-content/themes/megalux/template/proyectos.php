@@ -72,7 +72,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                   <div class="col-12 col-md-4 col-item <?php foreach($terms as $item){echo $item->slug.' '; }?> ">
                     <a href="<?php echo get_permalink(); ?>" class="col-project">
                       <?php if(get_field('galeria')){ ?>
-                        <img src="<?php echo get_field('galeria')[0]['url'];?>" alt="<?php echo get_field('galeria')[0]['alt'];?>" title="<?php echo get_field('galeria')[0]['title'];?>">
+                        <img src="<?php echo get_field('galeria')[0]['sizes']['large'];?>" alt="<?php echo get_field('galeria')[0]['alt'];?>" title="<?php echo get_field('galeria')[0]['title'];?>">
                       <?php }?>
 
                       <p><?php the_title(); ?></p>

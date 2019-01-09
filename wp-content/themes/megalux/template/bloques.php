@@ -218,7 +218,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
 
                         <div class="col-12 col-md-4 col-item">
                           <a href="<?php echo get_permalink($proyecto['proyecto_destacado']); ?>" class="col-project">
-                           <?php if(get_field('galeria', $proyecto['proyecto_destacado']->ID )[0]){ /*echo '<pre>';print_r(get_field('galeria', $proyecto['proyecto_destacado']->ID ));echo '</pre>'*/?>
+                           <?php if(get_field('galeria', $proyecto['proyecto_destacado']->ID )[0]){ ?>
                              <img src="<?php echo get_field('galeria', $proyecto['proyecto_destacado']->ID )[0]['sizes']['large'];?>" alt="<?php echo get_field('galeria', $proyecto['proyecto_destacado']->ID )[0]['alt'];?>" title="<?php echo get_field('galeria', $proyecto['proyecto_destacado']->ID )[0]['title'];?>">
                            <?php }?>
 
