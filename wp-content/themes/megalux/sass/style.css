@@ -18330,4 +18330,8 @@ form.wpcf7-form .privacy-policy {
   100% {
     opacity: 1; } }
 
+/* line 1441, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
+.rs-background-video-layer iframe {
+  visibility: inherit !important; }
+
 /*# sourceMappingURL=style.css.map */
