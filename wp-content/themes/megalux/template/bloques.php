@@ -24,14 +24,17 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
       </div>
     </section>
   <?php } 
-  
-    if(is_front_page() && get_field('shortcode_slider')){
-      echo do_shortcode(get_field('shortcode_slider'));
-    }
       
     $bloque = get_field('bloques');
     if ($bloque){
       foreach($bloque as $item){
+        
+        //slider
+        if($item['acf_fc_layout'] == 'bloque_slider') {
+          if($item['shortcode_slider']){
+            echo do_shortcode($item['shortcode_slider']);
+          }
+        }
         
         //caja de texto
         if($item['acf_fc_layout'] == 'caja_de_texto') {?>
