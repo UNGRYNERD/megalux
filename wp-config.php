@@ -81,7 +81,7 @@ define('BLOG_ID_CURRENT_SITE', 1);
  * Se recomienda encarecidamente a los desarrolladores de temas y plugins que usen WP_DEBUG
  * en sus entornos de desarrollo.
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
 
 /* ¡Eso es todo, deja de editar! Feliz blogging */
 
