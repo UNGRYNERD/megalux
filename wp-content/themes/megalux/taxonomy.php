@@ -16,6 +16,9 @@ include('header.php');?>
           <div class="col-12">
             <h1 class="text-center"><?php echo single_cat_title( '', false);?></h1>
             <?php custom_breadcrumbs(); ?>
+            <?php if ( function_exists('yoast_breadcrumb') ) {
+	yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+} ?>
           </div>
 
         </div>
@@ -36,7 +39,7 @@ include('header.php');?>
                 'categoria_producto',
                 array(
                   'hide_empty' => false,
-                  'orderby' => name,
+                  'orderby' => 'name',
                   'order' => 'DESC',
                   'parent' => 0
                 )

@@ -19,8 +19,20 @@ $producto = get_field('pagina_de_productos','option');
   <section class="box-content box-info-post">
     <div class="container">
       <div class="row">
-       
-        <?php if(get_field('imagen_izquierda')){?>
+      
+        <?php if(get_field('galeria_izquierda')){?>
+          <div class="col-12 col-md-6">
+              <div class="thumbslider">
+                <ul id="lightSlider">
+                  <?php foreach(get_field('galeria_izquierda') as $item){?>
+                    <li data-thumb="<?php echo $item['url']?>">
+                      <img src="<?php echo $item['url']?>" />
+                    </li>
+                  <?php }?>
+                </ul>
+              </div>
+          </div>
+        <?php } else if(get_field('imagen_izquierda')){?>
           <div class="col-12 col-md-6">
             <img src="<?php echo get_field('imagen_izquierda')['url']?>" alt="<?php echo get_field('imagen_izquierda')['alt']?>" title="<?php echo get_field('imagen_izquierda')['title']?>">
           </div>
