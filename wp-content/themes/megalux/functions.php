@@ -582,30 +582,29 @@ function custom_breadcrumbs() {
             } 
           
             // CPT PRODUCTOS
-            if($post_type == 'productos') {
-                  
-              $tax = get_terms(
-                'categoria_producto',
-                array(
-                  'hide_empty' => false,
-                  'parent' => 0
-                )
-              );
-
-              echo '<li class="item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . get_term_link($tax[0]->term_id) . '" title="' . $tax[0]->name . '">' . $tax[0]->name . '</a></li>';
-              echo '<li class="separator"> ' . $separator . ' </li>';
+            if($post_type == 'productos') {          
               
-              $tax_child = get_terms(
-                'categoria_producto',
-                array(
-                  'hide_empty' => false,
-                  'parent' => $tax[0]->term_id
-                )
-              );
+              $terms = get_the_terms( get_the_ID(), 'categoria_producto' );
               
-              if($tax_child){
-                echo '<li class="item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . get_term_link($tax_child[0]->term_id) . '" title="' . $tax_child[0]->name . '">' . $tax_child[0]->name . '</a></li>';
-                echo '<li class="separator"> ' . $separator . ' </li>';
+              if($terms){
+                //padres
+                foreach ( $terms as $term ){
+                  if ( $term->parent == 0 ) {
+                    echo '<li class="item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . get_term_link($term->term_id) . '" title="' . $term->name . '">' . $term->name . '</a></li>';
+                    echo '<li class="separator"> ' . $separator . ' </li>';
+                  }
+                }
+                //Hijos
+                $total = count($terms);
+                foreach ( $terms as $key => $term ){
+                  if ( $term->parent != 0) { 
+                    if($key == $total-1){
+                      echo '<li class="item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . get_term_link($term->term_id) . '" title="' . $term->name . '">' . $term->name . '</a></li>';
+                      echo '<li class="separator"> ' . $separator . ' </li>';
+                    }
+                  }
+                }
+                
               }
             }   
           
@@ -750,3 +749,4 @@ function cs_custom_posts_per_page( $query ) {
     }
 }
 add_filter( 'pre_get_posts', 'cs_custom_posts_per_page' );
+   
