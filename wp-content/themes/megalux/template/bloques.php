@@ -123,7 +123,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <?php } if($item['galeria']){
                   foreach($item['galeria'] as $galeria){?>
                    
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 align-self-center">
                       <img src="<?php echo $galeria['url'];?>" alt="<?php echo $galeria['alt'];?>" title="<?php echo $galeria['title'];?>">
                     </div>
                     
