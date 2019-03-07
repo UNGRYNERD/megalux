@@ -5,7 +5,7 @@
 
 $blog_page = get_option('page_for_posts');
 
-include( get_template_directory() . '/header.php');?>
+get_header()?>
 
 <main class="blog-page">
  
@@ -98,4 +98,4 @@ include( get_template_directory() . '/header.php');?>
 
 <?php 
 
-include( get_template_directory() . '/footer.php'); ?>
+get_footer(); ?>

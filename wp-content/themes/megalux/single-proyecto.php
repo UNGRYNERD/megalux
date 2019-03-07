@@ -1,4 +1,4 @@
-<?php include('header.php');
+<?php get_header();
 
 $proyecto = get_field('pagina_de_proyectos', 'option');
 

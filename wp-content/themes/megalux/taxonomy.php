@@ -6,7 +6,7 @@
 
 $producto = get_field('pagina_de_productos','option');
 
-include('header.php');?>
+get_header(); ?>
 
 <main class="single-content single-content--<?php echo $post->post_type?> page-product">
   <section class="box-header">
@@ -16,9 +16,6 @@ include('header.php');?>
           <div class="col-12">
             <h1 class="text-center"><?php echo single_cat_title( '', false);?></h1>
             <?php custom_breadcrumbs(); ?>
-            <?php if ( function_exists('yoast_breadcrumb') ) {
-	yoast_breadcrumb('<p id="breadcrumbs">','</p>');
-} ?>
           </div>
 
         </div>
@@ -193,4 +190,4 @@ include('header.php');?>
 </main>
 
 <?php
-include( get_template_directory() . '/footer.php'); ?>
+get_footer(); ?>

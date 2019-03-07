@@ -2,8 +2,8 @@
 /**
 * Template name: Paginas legales
 */
+get_header();
 
-include( get_template_directory() . '/header.php');
 if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 <main class="page-content page-legales">
@@ -38,4 +38,4 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
 </main>
 
 <?php endwhile; endif;
-include( get_template_directory() . '/footer.php'); ?>
+get_footer(); ?>

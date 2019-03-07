@@ -3,7 +3,8 @@
 * Template name: Página contacto
 */
 
-include( get_template_directory() . '/header.php');
+get_header();
+
 if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 <main class="page-contact">
@@ -159,7 +160,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 endwhile; endif; 
 
-include( get_template_directory() . '/footer.php'); ?>
+get_footer(); ?>
 
 
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtTH5b1RE_jq8HZkI8N5Kq17folO15MMg"></script>

@@ -1,5 +1,5 @@
 /*
-    Example usage: 
+    Example usage:
     @include animation(0, 20s, animation-name, infinite)
  */
 /*@include placeholder {
@@ -18333,5 +18333,3 @@ form.wpcf7-form .privacy-policy {
 /* line 1441, /Applications/MAMP/htdocs/megalux/wp-content/themes/megalux/sass/themes/_magalux.scss */
 .rs-background-video-layer iframe {
   visibility: inherit !important; }
-
-/*# sourceMappingURL=style.css.map */

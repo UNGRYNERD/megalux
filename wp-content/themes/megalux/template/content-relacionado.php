@@ -7,7 +7,7 @@
       <?php } if(get_field('paginas_relacionadas')){
         foreach (get_field('paginas_relacionadas') as $proyecto) {
           if($proyecto['imagen']){
-            $img = $proyecto['imagen']['sizes']['large'];
+            $img = $proyecto['imagen']['url'];
           } else {
             $img = get_template_directory_uri().'/img/default-img.jpg';
           }?>

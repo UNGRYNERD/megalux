@@ -1,6 +1,6 @@
 <?php
 
-include('header.php'); ?>
+get_header(); ?>
 
 <main class="page-404">
   <section class="box-header">
@@ -30,5 +30,5 @@ include('header.php'); ?>
   </section>
 </main>
 
-<?php include('footer.php'); ?>
+<?php get_footer(); ?>
 

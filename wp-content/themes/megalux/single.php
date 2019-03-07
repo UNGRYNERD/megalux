@@ -1,4 +1,4 @@
-<?php include('header.php');
+<?php get_header();
 if (have_posts()) : while (have_posts()) : the_post(); 
 
 $terms = get_the_terms( $post->ID, 'category' );
@@ -130,4 +130,4 @@ $post_tags = get_the_tags();
 </main>
 
 <?php endwhile; endif; ?>
-<?php include('footer.php'); ?>
+<?php get_footer(); ?>

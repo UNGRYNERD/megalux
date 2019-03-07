@@ -3,11 +3,12 @@
 * Template name: Página bloques
 */
 
-include( get_template_directory() . '/header.php');
+get_header();
+
 if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 <main>
- 
+
   <?php if(post_image_size() && get_field('titulo_imagen_cabecera')){?>
     <section class="box-header" style="background-image:url('<?php echo post_image_size();?>')">
       <div class="container">
@@ -123,7 +124,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <?php } if($item['galeria']){
                   foreach($item['galeria'] as $galeria){?>
                    
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 align-self-center">
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 align-self-center text-center">
                       <img src="<?php echo $galeria['url'];?>" alt="<?php echo $galeria['alt'];?>" title="<?php echo $galeria['title'];?>">
                     </div>
                     
@@ -382,4 +383,4 @@ $(document).ready(function(){
 
 endwhile; endif; 
 
-include( get_template_directory() . '/footer.php'); ?>
+get_footer(); ?>

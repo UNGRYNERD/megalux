@@ -1,4 +1,5 @@
-<?php include('header.php');
+<?php get_header();
+
 if (have_posts()) : while (have_posts()) : the_post();
 
 $producto = get_field('pagina_de_productos','option');
@@ -102,7 +103,7 @@ $producto = get_field('pagina_de_productos','option');
 </main>
 
 <?php endwhile; endif; ?>
-<?php include('footer.php'); ?>
+<?php get_footer(); ?>
 
 <script>
       

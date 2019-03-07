@@ -1,4 +1,4 @@
-<?php include('header.php');
+<?php get_header();
 if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 <main class="page-content page-default">
@@ -28,4 +28,4 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
 </main>
 
 <?php endwhile; endif; ?>
-<?php include('footer.php'); ?>
+<?php get_footer(); ?>

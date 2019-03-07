@@ -34,7 +34,7 @@ if (comments_open()) {
             <textarea name="comment" cols="30" rows="6" placeholder="Mensaje *" class="form-control required"></textarea>
           </div>
           <div>
-            <button class="button button--outline button--blue" id="submit-comment">Publicar</button>
+            <button class="button button--outline button--blue" id="submit-comment"><?php echo __('Publicar','megalux');?></button>
             <?php comment_id_fields(); ?>
           </div>
         </div>
