@@ -70,15 +70,20 @@ if (have_posts()) : while (have_posts()) : the_post();?>
 
         </div>
         
-        <?php if(get_field('imagen_banner') && get_field('url_banner')) {?>
-
-          <div class="col-12 text-center">
+        <div class="col-12 blockbanner">
+          <?php if(get_field('titulo_full')) {?>
+            <h2 class="blockbanner__title"><?php the_field('titulo_full')?></h2>
+          <?php } if(get_field('contenido_full')) {?>
+            <div class="content">
+              <?php the_field('contenido_full')?>
+            </div>
+          <?php } if(get_field('imagen_banner') && get_field('url_banner')) {?>
             <a href="<?php echo get_field('url_banner');?>" class="box-cta">
               <img class="img-border" src="<?php echo get_field('imagen_banner')['url'];?>" alt="<?php echo get_field('imagen_banner')['alt'];?>" title="<?php echo get_field('imagen_banner')['title'];?>">
             </a>
-          </div>
+          <?php }?>
+        </div>
 
-        <?php }?>
       </div>
       
     </div>
