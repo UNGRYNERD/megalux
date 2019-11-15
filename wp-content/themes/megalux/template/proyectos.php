@@ -37,7 +37,9 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
 
         if($taxonomy){?>
           <div id="filters" class="col-12 text-center category-list">
-            <button class="button button--outline button--blue button--filter is-checked" data-filter="*">Todo</button>
+            <button class="button button--outline button--blue button--filter is-checked" data-filter="*">
+              <?php echo __('Inicio', 'megalux'); ?>
+            </button>
 
             <?php foreach( $taxonomy as $key => $tax ){?>
               <button class="button button--outline button--blue button--filter" data-filter=".<?php echo $tax->slug?>"><?php echo $tax->name?></button>
